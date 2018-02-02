@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}بنیاد کودک{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../static/css/home.css">
+    <link rel="stylesheet" href="../../static/css/sidebar/sidebar.css">
+</head>
+<body style="background-color: #3f001f;">
+<div id="wrapper">
+
+    <nav class="navbar" style="border: black solid 2px; padding: 0px; margin: 0px">
+        <div class="container-fluid" style="background: white; padding: 0px; margin: 0px">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                </button>
+            </div>
+
+            <!--Menu Items-->
+            <div class="collapse navbar-collapse" id="mainNavBar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="#" class="btn btn-success" id="menu-toggle"
+                           style=" background-color:#630d31; border-color:#4d0926; font-family: 'B Mitra'; font-weight:bold; font-size: 18px; padding: 8px; margin: 8px;">منوی
+                            کاربری</a>
+                    </li>
+                </ul>
+                <span class="pull-right">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'contact' %}"
+                       style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                       onMouseOver="this.style.color='#230007';"
+                       onMouseOut="this.style.color='#7a0134'; ">ارتباط با ما</a></li>
+                <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+               style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+               onMouseOver="this.style.color='#230007';"
+               onMouseOut="this.style.color='#7a0134';">آشنایی با بنیاد کودک <span class="caret"></span></a>
+            <ul class="dropdown-menu"
+                style="text-align: right; color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                onMouseOver="this.style.color='#230007'; this.style.fontWeight='bold';"
+                onMouseOut="this.style.color='#7a0134'; this.style.fontWeight='normal'">
+              <li><a href="{% url 'history' %}">تاریخچه</a></li>
+              <li><a href="{% url 'chart' %}">چارت سازمانی</a></li>
+              <li><a href="{% url 'goals' %}">اهداف و دیدگاه ها</a></li>
+            </ul>
+            </li>
+                <li class="active"><a href="{% url 'home' %}"
+                                      style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                                      onMouseOver="this.style.color='#230007';"
+                                      onMouseOut="this.style.color='#7a0134';">بنیاد کودک</a></li>
+                 <li><img src="../../static/images/cf3.png"
+                          style="width: 50px; height: 50px; opacity: 0.8; padding: 5px; alignment: right;"></li>
+
+                <!--drop down menu-->
+            </ul>
+                    <!--right alight-->
+            </span>
+            </div>
+
+        </div>
+    </nav>
+    <!--sidebar-->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
+            <li><a href="{% url 'login' %}"> &nbsp &nbsp ورود &nbsp &nbsp </a>
+            <li><a href="{% url 'hamyar-register' %}"> &nbsp &nbsp ثبت نام همیار &nbsp &nbsp </a>
+            <li><a href="../../../templates/Viewer/Viewer_Search.html"> &nbsp &nbsp جست و جوی مددجو &nbsp &nbsp </a>
+            </li>
+        </ul>
+    </div>
+    <div class="modal fade" id="Register">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-right">ثبت نام همیار</h3>
+                </div>
+
+                <!-- body (form) -->
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control text-right"
+                                   placeholder="نام و نام‌خانوادگی">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control text-right"
+                                   placeholder="آدرس پست الکترونیکی">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control text-right"
+                                   placeholder="شماره تماس">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control text-right"
+                                   placeholder="نام کاربری">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control text-right"
+                                   placeholder="کلمه عبور">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- button -->
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-block" style="background: #850032">ثبت نام</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <!--menue toggle script-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed")
+        });
+    </script>
+
+</div>
+
+
+</body>
+</html>

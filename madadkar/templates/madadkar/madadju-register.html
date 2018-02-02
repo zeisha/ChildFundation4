@@ -1,0 +1,66 @@
+{% extends 'madadkar/madadkar-base.html' %}
+
+{% block title %}
+    ثبت نام مددجو
+{% endblock %}
+
+
+
+{% block content %}
+    <!--page content-->
+<div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
+                       <h1 style="font-family: 'B Nazanin';">ثبت مددجوی جدید در سامانه</h1>
+                        <form role="form" style="font-family: 'B Nazanin'; font-size: 20px;">
+                            <p style="color:#7a0134;">
+                            &nbsp&nbspنام
+                            <br>
+                            <input type="text" name="firstname" style=" border-radius: 8px; border-style: ridge;">
+                                <br><br>
+                             &nbsp&nbspنام خانوادگی
+                            <br>
+                            <input type="text" name="lastname" style=" border-radius: 8px; border-style: ridge;">
+                            <br>
+                            <br>
+                            &nbsp&nbspکد ملی
+                            <br>
+                            <input type="number" name="id" style=" border-radius: 8px; border-style: ridge;">
+                            <br>
+                            <br>
+                            &nbsp&nbspشماره تماس
+                            <br>
+                            <input type="tel" name="tel" style=" border-radius: 8px; border-style: ridge;">
+                            <br>
+                            <br>جنسیت
+                            <br>
+                            <input type="radio" name="gender" value="boy">پسر
+                            <br>
+                            <input type="radio" name="gender" value="girl">دختر
+                            <br>
+                            <br>
+                            &nbsp&nbspسن
+                            <br>
+                            <input type="number" name="age" style=" border-radius: 8px; border-style: ridge;">
+                            <br>
+                            <br>
+                            &nbsp&nbspآدرس
+                            <br>
+                            <input type="text" name="age" style=" border-radius: 8px; border-style: ridge;">
+                            <br>
+                            <br>
+                            &nbsp&nbspشرح نیازها
+                            <br>
+                            <textarea name="need" rows="10" cols="30" style=" border-radius: 8px; border-style: ridge;"></textarea>
+                            <br>
+                                </p>
+                            <button type="submit" name="submit" style="color: white; background-color: rgba(121,7,75,0.8); border-radius: 10px; font-size: 28px;">ثبت</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

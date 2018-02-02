@@ -1,0 +1,90 @@
+{% extends 'madadju/madadju-base.html' %}
+
+{% block title %}
+    ارتباط با ما
+{% endblock %}
+
+
+
+{% block content %}
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <h1 class="text-right" id="bonyad">ارتباط با ما</h1>
+                        <p class="text-right" id="mashi">
+                            پاسخگویی از مهم‌ترین اصولی است که بنیادکودک خود را همواره ملزم به عمل به آن می‌داند. برای
+                            تحقق هرچه بیشتر این اصل از شما دوستان و همیاران عزیز تقاضا داریم تا ما را از نقطه نظرات،
+                            انتقادات و پیشنهادات خود مطلع فرمایید تا برای هرچه بهتر طی‌کردن مسیر پیشرفت و خدمت‌رسانیِ
+                            بنیادکودک از آنها بهره بگیریم.
+                            <br>
+                            آدرس: تهران، خیابان سهروردی شمالی، خیابان خرمشهر، بین خیابان عربعلی و عشقیار، پلاک 89 طبقه
+                            سوم و چهارم
+                            <br>
+                            کد پستی:1533899913
+                            <br>
+                            تلفن:42510-021
+                            <br>
+                            سامانه ی پیام کوتاه: 42510-021
+                            <br>
+                            فاکس: 42510-021
+                            <br>
+                            ایمیل دفتر مرکزی: info@childf.org
+                            <br>
+                            تلگرام: child_foundation@
+                            <br>
+                            اینستاگرام: child_foundation
+                            <br>
+                            خواهشمند است برای ارسال نظر یا پرسش، از طریق فرم زیر اقدام فرمایید.
+
+
+                            <br><br><br>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#popUpWindow"
+                                    style="color: white; background: #850032; font-family: 'B Nazanin'; font-size: 20px">
+                                فرم ارتباط با ما
+                            </button>
+
+                        <div class="modal fade" id="popUpWindow">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- header -->
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title text-right">ارتباط با ما</h3>
+                                    </div>
+
+                                    <!-- body (form) -->
+                                    <div class="modal-body text-right">
+                                        <form role="form" method="post">
+                                            {% csrf_token %}
+                                            {% for field in form %}
+                                                {{ field }}
+                                                <label class="label label-default"
+                                                       style="direction: rtl; font-family: 'B Mitra'; font-weight:bold; font-size: 13px; padding: 5px;">{{ field.label_tag }}</label>
+
+                                                <br>
+                                            {% endfor %}
+                                            <br>
+                                            <!-- button -->
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary btn-block"
+                                                        style="background: #850032">ثبت
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>جست و جو</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../sidebar/sidebar.css">
+    <link rel="stylesheet" href="../../modir/static/modir/css/home.css">
+</head>
+<body style="background-color: #3f001f;">
+
+
+<div id="wrapper">
+
+    <nav class="navbar" style="border: black solid 2px; padding: 0px; margin: 0px">
+        <div class="container-fluid" style="background: white; padding: 0px; margin: 0px">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                </button>
+            </div>
+
+            <!--Menu Items-->
+            <div class="collapse navbar-collapse" id="mainNavBar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="#" class="btn btn-success" id="menu-toggle"
+                           style=" background-color:#630d31; border-color:#4d0926; font-family: 'B Mitra'; font-weight:bold; font-size: 18px; padding: 8px; margin: 8px;">منوی
+                            کاربری</a>
+                    </li>
+                </ul>
+                <span class="pull-right">
+            <ul class="nav navbar-nav">
+                <li><a href="Contact-Hamyar.html" style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                       onMouseOver="this.style.color='#230007';"
+                       onMouseOut="this.style.color='#7a0134'; ">ارتباط با ما</a></li>
+                <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+               style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+               onMouseOver="this.style.color='#230007';"
+               onMouseOut="this.style.color='#7a0134';">آشنایی با بنیاد کودک <span class="caret"></span></a>
+            <ul class="dropdown-menu"
+                style="text-align: right; color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                onMouseOver="this.style.color='#230007'; this.style.fontWeight='bold';"
+                onMouseOut="this.style.color='#7a0134'; this.style.fontWeight='normal'">
+              <li><a href="History-Hamyar.html">تاریخچه</a></li>
+              <li><a href="Chart-Hamyar.html">چارت سازمانی</a></li>
+              <li><a href="Goals-Hamyar.html">اهداف و دیدگاه ها</a></li>
+            </ul>
+            </li>
+                <li class="active"><a href="Home-Hamyar.html"
+                                      style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                                      onMouseOver="this.style.color='#230007';"
+                                      onMouseOut="this.style.color='#7a0134';">بنیاد کودک</a></li>
+                 <li><img src="../../modir/static/modir/images/cf3.png"
+                          style="width: 50px; height: 50px; opacity: 0.8; padding: 5px; alignment: right;"></li>
+
+                <!--drop down menu-->
+            </ul>
+                    <!--right alight-->
+            </span>
+            </div>
+
+        </div>
+    </nav>
+    <!--sidebar-->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
+            <li><a href="pay.html"> &nbsp &nbsp پرداخت &nbsp &nbsp </a></li>
+            <li><a href="hadayaye-gheirenaghdi.html"> &nbsp &nbsp هدایای غیرنقدی &nbsp &nbsp </a></li>
+            <li><a href="messageSending.html"> &nbsp &nbsp ارسال پیام &nbsp &nbsp </a></li>
+            <li><a href="madadjooContact.html"> &nbsp &nbsp درخواست ارتباط با مددجو &nbsp &nbsp </a></li>
+            <li><a href="madadjoo-list.html"> &nbsp &nbsp کودکان تحت حمایت &nbsp &nbsp </a></li>
+            <li><a href="entekhab-madadjoo.html"> &nbsp &nbsp انتخاب مددجو &nbsp &nbsp </a></li>
+            <li><a href="enseraf.html"> &nbsp &nbsp انصراف &nbsp &nbsp </a></li>
+            <li><a href="letters.html"> &nbsp &nbsp نامه ها &nbsp &nbsp </a></li>
+            <li><a href="vojoohepardakhti.html"> &nbsp &nbsp گزارش وجوه پرداختی &nbsp &nbsp </a></li>
+            <li><a href="receipt.html"> &nbsp &nbsp لیست رسیدها &nbsp &nbsp </a></li>
+            <li><a href="search.html"> &nbsp &nbsp جست و جو &nbsp &nbsp </a></li>
+            <li><a href="../../MySite/templates/MySite/Chart.html"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
+        </ul>
+    </div>
+
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
+
+                        <h3 style="font-family: 'B Nazanin';">جست و جوی مددجو</h3>
+                        <br>
+                        <form style="font-family: 'B Nazanin'; font-size: 20px;">
+                            <center><div class="form-group">
+                                <select style="width: 500px" dir="rtl" class="form-control text-right" id="sel1">
+                                    <option class="text-right" value="0">جنسیت...</option>
+                                    <option value="1">دختر</option>   rast chin kardan
+                                    <option value="2">پسر</option>    rast
+                                </select>
+                            </div></center>
+                            <center><div class="form-group">
+                                <select style="width: 500px" dir="rtl" class="form-control" id="sel2" >
+                                    <option value="0">از سن</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                </select>
+                            </div></center>
+                            <center><div class="form-group">
+                                <select style="width: 500px" dir="rtl" class="form-control" id="sel3">
+                                    <option value="0">تا سن</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                </select>
+                            </div></center>
+                            <center><div class="form-group">
+                                <select style="width: 500px" dir="rtl" class="form-control" id="sel4">
+                                    <option value="0">وضعیت جسمی...</option>
+                                    <option value="1">سالم</option>
+                                    <option value="2">بیمار</option>
+                                    <option value="3">معلول</option>
+                                    <option value="4">ناشنوا</option>
+                                    <option value="5">سرطانی</option>
+                                    <option value="6">نابینا</option>
+                                    <option value="7">نیمه بینا</option>
+                                </select>
+                            </div></center>
+                            <center><div class="form-group">
+                                <select dir="rtl" style="width: 500px" class="form-control text-right" id="sel5">
+                                    <option class="text-right" value="0">استان...</option>
+                                    <option value="1">آذربایجان غربی</option>
+                                    <option value="2">آذربایجان شرقی</option>
+                                    <option value="3">اردبیل</option>
+                                    <option value="4">اصفهان</option>
+                                    <option value="5">البرز</option>
+                                    <option value="6">ایلام</option>
+                                    <option value="7">بوشهر</option>
+                                    <option value="8">تهران</option>
+                                    <option value="9">چهار محال بختیاری</option>
+                                    <option value="10">خراسان جنوبی</option>
+                                    <option value="11">خراسان رضوی</option>
+                                    <option value="12">خراسان شمالی</option>
+                                    <option value="14">خوزستان</option>
+                                    <option value="15">زنجان</option>
+                                    <option value="16">سمنان</option>
+                                    <option value="17">سیستان و بلوچستان</option>
+                                    <option value="18">فارس</option>
+                                    <option value="19">قزوین</option>
+                                    <option value="20">قم</option>
+                                    <option value="21">کردستان</option>
+                                    <option value="22">کرمان</option>
+                                    <option value="23">کرمانشاه</option>
+                                    <option value="24">کهگیوله و بویر احمد</option>
+                                    <option value="25">گلستان</option>
+                                    <option value="26">گیلان</option>
+                                    <option value="27">لرستان</option>
+                                    <option value="28">مازندران</option>
+                                    <option value="29">مرکزی</option>
+                                    <option value="30">هرمزگان</option>
+                                    <option value="31">همدان</option>
+                                    <option value="32">یزد</option>
+                                </select>
+                            </div></center>
+                        </form>
+                        <div class="modal-footer">
+                            <a href="../searchResult.html">
+                            <button class="btn btn-primary btn-block" data-toggle="modal"
+                                    style="background: #850032; width: 100px">جست و جو
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--menue toggle script-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed")
+        });
+    </script>
+
+</div>
+
+
+</body>
+</html>

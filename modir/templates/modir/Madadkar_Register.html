@@ -1,0 +1,259 @@
+{% extends 'modir/base.html' %}
+
+{% block title %}همیار
+{% endblock %}
+
+
+
+{% block content %}
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <section id="signup">
+                            <form class="well form-horizontal" style="direction: rtl" action="" method="post"
+                                  id="signup_form">{% csrf_token %}
+                                <fieldset>
+                                    <legend>
+                                        <center><h2><b>ثبت نام همیار</b></h2></center>
+                                    </legend>
+                                    <br>
+
+                                    <div class="form-group  {% if form.first_name.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="first_name" placeholder="نام" class="form-control"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.first_name.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.first_name.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group  {% if form.last_name.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="last_name" placeholder="نام خانوادگی"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.last_name.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.last_name.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group  {% if form.username.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="username" placeholder="نام کاربری" class="form-control"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% if form.username.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.username.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if form.email.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-envelope"></i></span>
+                                                <input name="email" placeholder="آدرس ایمیل" class="form-control"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.email.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.email.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if phone_number_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-phone"></i></span>
+                                                <input name="phone_number" placeholder="شماره تلفن"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if phone_number_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ phone_number_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if national_id_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-search"></i></span>
+                                                <input name="national_id" placeholder="کد ملی"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if national_id_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ national_id_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if country_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="country" placeholder="کشور"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if country_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ country_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if city_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="city" placeholder="شهر"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if city_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ city_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if address_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="address" placeholder="آدرس"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if address_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ address_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if postal_code_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <input name="postal_code" placeholder="کدپستی"
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if postal_code_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ postal_code_error }}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group {% if report_method_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-cloud"></i></span>
+                                                <input name="report_method" placeholder='روش ارتباطی'
+                                                       class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if report_method_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ postal_code_error }}
+                                        </span>
+                                    {% endif %}
+
+
+
+
+
+
+
+                                    <div class="form-group  {% if form.password1.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="password1" placeholder="رمز" class="form-control"
+                                                       type="password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.password1.errors and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.password1.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+                                    <div class="form-group {% if form.password2.errors and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-user"></i></span>
+                                                <input name="password2" placeholder="رمز را دوباره وارد کنید."
+                                                       class="form-control"
+                                                       type="password">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% if form.password2.errors and type == 'signup' %}
+                                        <span class="text-danger">
+                                            <p>{% for error in form.password2.errors %}{{ error }}{% endfor %}</p>
+                                        </span>
+                                    {% endif %}
+
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <input type="submit" name="submit" id="register-submit"
+                                                       tabindex="4" class="form-control btn btn-register"
+                                                       value="ثبت نام"
+                                                       placeholder="ثبت نام">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'modir/base.html' %}
+{% block title %}لیست پرداخت‌ها به مددجو{% endblock %}
+
+
+
+{% block content %}
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <section id="report">
+                            <form class="well form-horizontal" style="direction: rtl">
+                                <fieldset>
+                                    <legend>
+                                        <center><h2 style="font-family: 'B Nazanin'; font-size: 30px; font-weight: bold;"><b>گزارش از پرداختی‌ها به مددجویان</b></h2></center>
+                                    </legend>
+                                    <br>
+                                    <div style="direction: rtl">
+                                        {% if all_payments %}
+                                            {% for payment in all_payments %}
+                                                <div class="col-sm-3 col-lg-4" style="float: right !important;">
+                                                    <div class="thumbnail">
+                                                        <div class="caption">
+                                                            <h5 style="background: #7a0134; font-family: 'B Nazanin'; font-size: 16px; font-weight: bold; color: white; padding: 10px; width: 100px; float: right; margin-left: 30px; border-radius: 20px">{{ payment.date }}</h5>
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">مبلغ : {{ payment.value }}</h4>
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">همیار : {{ payment.hamyar }}</h4>
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">مددجو : {{ payment.madadju }}</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

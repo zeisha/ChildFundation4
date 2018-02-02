@@ -1,0 +1,48 @@
+{% extends 'hamyar/Base.html' %}
+
+{% block title %}
+    لیست ممدجویات تحت کفالت
+{% endblock %}
+
+{% block content %}
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <section id="report">
+                            <form class="well form-horizontal" style="direction: rtl">
+                                <fieldset>
+                                    <legend>
+                                        <center><h2 style="font-family: 'B Nazanin'; font-size: 30px; font-weight: bold;"><b>لیست مدجویان تحت کفالت:</b></h2></center>
+                                    </legend>
+                                    <br>
+                                    <div style="direction: rtl">
+                                        {% if list %}
+                                            {% for madadjoo in list %}
+                                                <div class="col-sm-3 col-lg-4" style="float: right !important;">
+                                                    <div class="thumbnail">
+                                                        <div class="caption">
+                                                            <h5  style="background: #7a0134; font-family: 'B Nazanin'; font-size: 16px; font-weight: bold; color: white; padding: 10px; width: 100px; float: right; margin-left: 30px; border-radius: 20px">
+                                                                {{ madadjoo.user.user.first_name }}
+                                                            </h5>
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">نام خانوادگی :
+                                                                {{ madadjoo.user.user.last_name }}
+                                                            </h4>
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">سن : {{ madadjoo.age }}</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

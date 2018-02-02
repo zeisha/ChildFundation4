@@ -1,0 +1,56 @@
+{% extends 'modir/base.html' %}
+
+{% block title %}
+    حذف کاربر
+{% endblock %}
+
+
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-6" style="float: none; margin: 0 auto;">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <form style="direction: rtl" class="well form-horizontal" action="" method="post"
+                              id="delete_form">{% csrf_token %}
+                            <fieldset>
+                                <legend><h2 style="direction: rtl"><b>حذف کاربر</b></h2></legend>
+                                <br>
+                                {% if message %}
+                                    <div class="text-primary"> {{ form.errors.value }} {{ message }} </div>
+                                {% endif %}
+                                <div class="form-group {% if form.username.errors %}has-error{% endif %}">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" name="username" id="username" tabindex="1"
+                                                   class="form-control" placeholder="نام کاربری"
+                                                   value="{% if form8 %} {{ form.username.value }} {% endif %}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+
+                                            <input type="submit" name="submit" id="delete-submit" tabindex="4"
+                                                   class="form-control btn btn-login" value="حذف"
+                                                   placeholder="حذف">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

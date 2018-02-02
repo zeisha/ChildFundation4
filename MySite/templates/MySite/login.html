@@ -1,0 +1,81 @@
+{% extends 'MySite/base.html' %}
+
+{% block title %}
+    ورود
+{% endblock %}
+
+
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-6" style="float: none; margin: 0 auto;">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <form style="direction: rtl" class="well form-horizontal" action="" method="post"
+                              id="login_form">{% csrf_token %}
+                            <fieldset>
+                                <legend><h2 style="direction: rtl"><b>ورود به سایت</b></h2></legend>
+                                <br>
+                                {% if type == 'login' and message %}
+                                    <div class="text-danger"> {{ form.errors.value }} {{ message }} </div>
+                                {% endif %}
+                                <div class="form-group {% if form.username.errors and type == 'login' %}has-error{% endif %}">
+                                    <div class="col-md-12 inputGroupContainer">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" name="username" id="username" tabindex="1"
+                                                   class="form-control" placeholder="نام کاربری"
+                                                   value="{% if type == 'login' and form8 %} {{ form.username.value }} {% endif %}">
+                                        </div>
+                                    </div>
+                                    {% if form.username.errors and type == 'login' %}
+                                        <span class="text-danger" style="text-align:center;">
+                    {% for error in form.username.errors %}{{ error }}{% endfor %}
+                </span>
+                                    {% endif %}
+                                </div>
+                                {% if type != 'forger_password' %}
+                                    <div class="form-group {% if form.password.errors and type == 'login' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                <input type="password" name="password" id="password" tabindex="2"
+                                                       class="form-control" placeholder="رمز">
+                                            </div>
+                                        </div>
+                                        {% if form.password.errors and type == 'login' %}
+                                            <span class="text-danger" style="text-align:center;">
+                    {% for error in form.password.errors %}{{ error }}{% endfor %}
+                </span>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            {% if type != 'forget_password' %}
+                                                <input type="submit" name="submit" id="login-submit" tabindex="4"
+                                                       class="form-control btn btn-login" value="ورود"
+                                                       placeholder="ورود">
+                                            {% else %}
+                                                <input type="submit" name="submit" id="login-submit" tabindex="4"
+                                                       class="form-control btn btn-login" value="بازیابی رمز"
+                                                       placeholder="بازیابی رمز">
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends 'madadkar/madadkar-base.html' %}
+
+{% block title %}
+    بنیاد کودک
+{% endblock %}
+
+
+
+{% block content %}
+
+<!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <p style="text-align: right; font-family: 'B Nazanin'; font-size: 30px; font-weight: bold;">صفحه شخصی قلی قلوی</p>
+                        <br>
+                        <table class="table table-hover" style="alignment: right; text-align: right; font-family: 'B Nazanin'; font-size: 24px; ">
+                            <tr>
+                                <td>gholghol27</td>
+                                <td style="font-weight: bold">نام کاربری</td>
+                            </tr>
+                            <tr>
+                                <td>قلی</td>
+                                <td style="font-weight: bold">نام</td>
+                            </tr>
+                            <tr>
+                                <td>قلوی</td>
+                                <td style="font-weight: bold">نام خانوادگی</td>
+                            </tr>
+                            <tr>
+                                <td>ایران</td>
+                                <td style="font-weight: bold">کشور</td>
+                            </tr>
+                            <tr>
+                                <td>تهران</td>
+                                <td style="font-weight: bold">شهر</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#popUpWindow" name="submit" style="text-align:right; color: white; background-color: rgba(121,7,75,0.8); border-radius: 10px; font-size: 28px; border-color: #222222;">ویرایش</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="popUpWindow">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- header -->
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title text-right">ویرایش مشخصات شخصی</h3>
+                                    </div>
+
+                                    <!-- body (form) -->
+                                    <div class="modal-body">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="قلی">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control text-right"
+                                                       placeholder="قلوی">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control text-right"
+                                                       placeholder="012345678">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="09123456789">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="ایران">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="تهران">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="۸۹۵۳۷۳۹۸۳۸۴">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="تهران،خیابان آزادی،نرسیده به میدان آزادی،دانشگاه شریف">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- button -->
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary btn-block" style="background: #850032" >ثبت</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+{% endblock %}

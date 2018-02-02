@@ -1,0 +1,203 @@
+{% extends 'hamyar/base.html' %}
+
+{% block title %}
+   چارت سازمانی
+{% endblock %}
+
+{% block content %}
+ <div class="modal fade" id="Login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-right">ورود</h3>
+                    </div>
+
+                    <!-- body (form) -->
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-right"
+                                       placeholder="نام کاربری">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control text-right"
+                                       placeholder="رمز عبور">
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- button -->
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-block" style="background: #850032">ورود</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <div class="modal fade" id="Register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-right">ثبت نام همیار</h3>
+                    </div>
+
+                    <!-- body (form) -->
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-right"
+                                       placeholder="نام و نام‌خانوادگی">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control text-right"
+                                       placeholder="آدرس پست الکترونیکی">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control text-right"
+                                       placeholder="شماره تماس">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control text-right"
+                                       placeholder="نام کاربری">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control text-right"
+                                       placeholder="کلمه عبور">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- button -->
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-block" style="background: #850032">ثبت نام</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <h1 class="text-right" id="bonyad">ارتباط با ما</h1>
+                        <p class="text-right" id="mashi">
+                            پاسخگویی از مهم‌ترین اصولی است که بنیادکودک خود را همواره ملزم به عمل به آن می‌داند. برای
+                            تحقق هرچه بیشتر این اصل از شما دوستان و همیاران عزیز تقاضا داریم تا ما را از نقطه نظرات،
+                            انتقادات و پیشنهادات خود مطلع فرمایید تا برای هرچه بهتر طی‌کردن مسیر پیشرفت و خدمت‌رسانیِ
+                            بنیادکودک از آنها بهره بگیریم.
+                            <br>
+                            آدرس: تهران، خیابان سهروردی شمالی، خیابان خرمشهر، بین خیابان عربعلی و عشقیار، پلاک 89 طبقه
+                            سوم و چهارم
+                            <br>
+                            کد پستی:1533899913
+                            <br>
+                            تلفن:42510-021
+                            <br>
+                            سامانه ی پیام کوتاه: 42510-021
+                            <br>
+                            فاکس: 42510-021
+                            <br>
+                            ایمیل دفتر مرکزی: info@childf.org
+                            <br>
+                            تلگرام: child_foundation@
+                            <br>
+                            اینستاگرام: child_foundation
+                            <br>
+                            خواهشمند است برای ارسال نظر یا پرسش، از طریق فرم زیر اقدام فرمایید.
+
+
+                            <br><br><br>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#popUpWindow"
+                                    style="color: white; background: #850032; font-family: 'B Nazanin'; font-size: 20px">
+                                فرم ارتباط با ما
+                            </button>
+
+                        <div class="modal fade" id="popUpWindow">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- header -->
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title text-right">ارتباط با ما</h3>
+                                    </div>
+
+                                    <!-- body (form) -->
+                                    <div class="modal-body">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="نام و نام‌خانوادگی">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control text-right"
+                                                       placeholder="آدرس پست الکترونیکی">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control text-right"
+                                                       placeholder="شماره تماس">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="عنوان پیام">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sel1" style="display:block; text-align:right;">ارتباط
+                                                    با</label>
+                                                <select dir="rtl" class="form-control text-right" id="sell">
+                                                    <option class="text-right">مدیریت</option>
+                                                    <option>روابط عمومی</option>
+                                                    <option>حسابداری</option>
+                                                    <option>جذب همیاری</option>
+                                                    <option>سایر</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group text-right">
+                                                <label for="comment">متن</label>
+                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <!-- button -->
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary btn-block" style="background: #850032">ثبت
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--menue toggle script-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed")
+        });
+    </script>
+
+</div>
+
+
+</body>
+{% endblock %}

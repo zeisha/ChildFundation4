@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>مشاهده مددجو</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../sidebar/sidebar.css">
+    <link rel="stylesheet" href="../modir/static/modir/css/home.css">
+</head>
+<body style="background-color: #3f001f;">
+
+
+<div id="wrapper">
+
+    <nav class="navbar" style="border: black solid 2px; padding: 0px; margin: 0px">
+        <div class="container-fluid" style="background: white; padding: 0px; margin: 0px">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                    <span class="icon-bar" style="background-color: #7a0134;"></span>
+                </button>
+            </div>
+
+            <!--Menu Items-->
+            <div class="collapse navbar-collapse" id="mainNavBar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="#" class="btn btn-success" id="menu-toggle"
+                           style=" background-color:#630d31; border-color:#4d0926; font-family: 'B Mitra'; font-weight:bold; font-size: 18px; padding: 8px; margin: 8px;">منوی
+                            کاربری</a>
+                    </li>
+                </ul>
+                <span class="pull-right">
+            <ul class="nav navbar-nav">
+                <li><a href="Contact.html" style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                       onMouseOver="this.style.color='#230007';"
+                       onMouseOut="this.style.color='#7a0134'; ">ارتباط با ما</a></li>
+                <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+               style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+               onMouseOver="this.style.color='#230007';"
+               onMouseOut="this.style.color='#7a0134';">آشنایی با بنیاد کودک <span class="caret"></span></a>
+            <ul class="dropdown-menu"
+                style="text-align: right; color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                onMouseOver="this.style.color='#230007'; this.style.fontWeight='bold';"
+                onMouseOut="this.style.color='#7a0134'; this.style.fontWeight='normal'">
+              <li><a href="History.html">تاریخچه</a></li>
+              <li><a href="Chart.html">چارت سازمانی</a></li>
+              <li><a href="Goals.html">اهداف و دیدگاه ها</a></li>
+            </ul>
+            </li>
+                <li class="active"><a href="#"
+                                      style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
+                                      onMouseOver="this.style.color='#230007';"
+                                      onMouseOut="this.style.color='#7a0134';">بنیاد کودک</a></li>
+                 <li><img src="../modir/static/modir/images/cf3.png"
+                          style="width: 50px; height: 50px; opacity: 0.8; padding: 5px; alignment: right;"></li>
+
+                <!--drop down menu-->
+            </ul>
+                    <!--right alight-->
+            </span>
+            </div>
+
+        </div>
+    </nav>
+    <!--sidebar-->
+        <!--sidebar-->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
+            <li><a href="/madadju-register.html" style="text-:10px"> &nbsp &nbsp ثبت مددجو &nbsp &nbsp </a></li>
+            <li><a href="taaligh.html"> &nbsp &nbsp تعلیق مددجو &nbsp &nbsp </a></li>
+            <li><a href="success.html"> &nbsp &nbsp به روزرسانی موفقیتها و دستآوردها&nbsp &nbsp </a></li>
+            <li><a href="edit-madadju.html"> &nbsp &nbsp به روزرسانی وضعیت مددجو &nbsp &nbsp </a></li>
+            <li><a href="report.html"> &nbsp &nbsp ثبت گزارش &nbsp &nbsp </a></li>
+            <li><a href="editneed.html"> &nbsp &nbsp تغییر نیاز مددجو &nbsp &nbsp </a></li>
+            <li><a href="seerequests.html"> &nbsp &nbsp بررسی درخواستها &nbsp &nbsp </a></li>
+            <li><a href="#"> &nbsp &nbsp جست و جوی مددجو &nbsp &nbsp </a></li>
+            <li><a href="instantneed.html"> &nbsp &nbsp افزودن نیاز فوری &nbsp &nbsp </a></li>
+            <li><a href="managesaving.html"> &nbsp &nbsp مدیریت پس انداز مددجو &nbsp &nbsp </a></li>
+            <li><a href="receipt.html"> &nbsp &nbsp ارسال رسید &nbsp &nbsp </a></li>
+            <li><a href="seemsg.html"> &nbsp &nbsp صندوق پیامها &nbsp &nbsp </a></li>
+            <li><a href="../MySite/templates/MySite/Home.html"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
+        </ul>
+    </div>
+    <div class="modal fade" id="Login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-right">ورود</h3>
+                    </div>
+
+                    <!-- body (form) -->
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-right"
+                                       placeholder="نام کاربری">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control text-right"
+                                       placeholder="رمز عبور">
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- button -->
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-block" style="background: #850032">ورود</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <div class="modal fade" id="Register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-right">ثبت نام همیار</h3>
+                    </div>
+
+                    <!-- body (form) -->
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-right"
+                                       placeholder="نام و نام‌خانوادگی">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control text-right"
+                                       placeholder="آدرس پست الکترونیکی">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control text-right"
+                                       placeholder="شماره تماس">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control text-right"
+                                       placeholder="نام کاربری">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control text-right"
+                                       placeholder="کلمه عبور">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- button -->
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-block" style="background: #850032">ثبت نام</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <p style="text-align: right; font-family: 'B Nazanin'; font-size: 30px; font-weight: bold;">صفحه شخصی قلی قلوی</p>
+                        <br>
+                        <table class="table table-hover" style="alignment: right; text-align: right; font-family: 'B Nazanin'; font-size: 24px; ">
+                            <tr>
+                                <td>gholghol27</td>
+                                <td style="font-weight: bold">نام کاربری</td>
+                            </tr>
+                            <tr>
+                                <td>قلی</td>
+                                <td style="font-weight: bold">نام</td>
+                            </tr>
+                            <tr>
+                                <td>قلوی</td>
+                                <td style="font-weight: bold">نام خانوادگی</td>
+                            </tr>
+                            <tr>
+                                <td>ایران</td>
+                                <td style="font-weight: bold">کشور</td>
+                            </tr>
+                            <tr>
+                                <td>تهران</td>
+                                <td style="font-weight: bold">شهر</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td style="font-weight: bold">سن</td>
+                            </tr>
+                            <tr>
+                                <td>ششم</td>
+                                <td style="font-weight: bold">پایه تحصیلی</td>
+                            </tr>
+                            <tr>
+                                <td>سالم</td>
+                                <td style="font-weight: bold">وضعیت جسمانی</td>
+                            </tr>
+                            <tr>
+                                <td>تغذیه، تحصیل، مسکن، وی دارای بیماری آسم است و نیاز به درمان دارد</td>
+                                <td style="font-weight: bold">نیازها</td>
+                            </tr>
+                            <tr>
+                                <td>نیاز به عمل جراحی دارد</td>
+                                <td style="font-weight: bold">نیازهای فوری</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="popUpWindow">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- header -->
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title text-right">ویرایش مشخصات شخصی</h3>
+                                    </div>
+
+                                    <!-- body (form) -->
+                                    <div class="modal-body">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="قلی">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control text-right"
+                                                       placeholder="قلوی">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control text-right"
+                                                       placeholder="012345678">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="09123456789">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="ایران">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="تهران">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="۸۹۵۳۷۳۹۸۳۸۴">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="تهران،خیابان آزادی،نرسیده به میدان آزادی،دانشگاه شریف">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="12">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="ششم">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control text-right"
+                                                       placeholder="سالم">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- button -->
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary btn-block" style="background: #850032" >ثبت</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+    <!--menue toggle script-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed")
+        });
+    </script>
+
+</div>
+
+
+</body>
+</html>
