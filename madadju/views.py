@@ -6,6 +6,7 @@ from karbar.models import Message, MyUser
 from modir.models import Admin
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout as auth_logout
 
 from MySite.forms import ContactForm, MessageForm
 
@@ -130,3 +131,8 @@ class MadadjuMsg2(TemplateView):
 
         context['form'] = form
         return render(request, self.template_name, context)
+
+
+def logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect(reverse('home'))
