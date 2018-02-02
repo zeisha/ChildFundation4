@@ -82,6 +82,10 @@ class MadadjuMsg(TemplateView):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
+        message = "پیام با موفقیت ارسال شد"
+        context={}
+        context['message'] = message
+        context['type'] = 'green'
         form = MessageForm(request.POST)
         sender = request.user
         text = request.POST.get('text')
@@ -90,35 +94,39 @@ class MadadjuMsg(TemplateView):
         madadju = Madadju.objects.get(user=u)
         receiver = madadju.current_madadkar
         receiver = receiver.user
-        context = {'sender': u, 'text': text, 'receiver': receiver}
+        #context = {'sender': u, 'text': text, 'receiver': receiver}
         if form.is_valid():
             message = Message.objects.create(sender=u, receiver=receiver, text=text)
             message.save()
-            return HttpResponseRedirect(reverse('madadju-home'))
+            return render(request,'madadju/madadju.html',context)
 
         context['form'] = form
         return render(request, self.template_name, context)
 
 
 class MadadjuMsg2(TemplateView):
-    template_name = 'madadju/sendmsg.html'
+    template_name = 'madadju/sendmsg2.html'
 
     def get(self, request, **kwargs):
         form = MessageForm()
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
+        message = "پیام با موفقیت ارسال شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
         form = MessageForm(request.POST)
         text = request.POST.get('text')
         user = request.user
         u = MyUser.objects.get(user=user)
         admin = Admin.objects.get()
         admin = admin.user
-        context = {'sender': u, 'text': text, 'receiver': admin}
+        #context = {'sender': u, 'text': text, 'receiver': admin}
         if form.is_valid():
             message = Message.objects.create(sender=u, receiver=admin, text=text)
             message.save()
-            return HttpResponseRedirect(reverse('madadju-home'))
+            return render(request, 'madadju/madadju.html', context)
 
         context['form'] = form
         return render(request, self.template_name, context)
