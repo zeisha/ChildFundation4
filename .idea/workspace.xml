@@ -2,203 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="033ddd4f-4a42-4b93-b441-4205f3b3e293" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Hamyar_Register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Edit_Profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Ehda.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Ehda_Receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Enseraf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Entekhab.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Letters_Box.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Madadjoo_Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Madadjoo_List.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Pay.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Pay_Receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Send_Message.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-history.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/sendmsg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/edit-madadju.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/editneed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/instantneed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/madadju-register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/madadkar-base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/managesaving.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/seemsg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/seerequests.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/success.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/taaligh.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Madadju_Report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Foundation_Kefalat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Foundation_Pardakht.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Foundation_Report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Hamyar_Register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Madadkar_Register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/PaymentsMadadjuReports.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/PaymentsReport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/form-template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Chart-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Contact-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Goals-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/History-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Home-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/enseraf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/entekhab-madadjoo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/hadayaye-gheirenaghdi.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/letters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/madadjoo-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/madadjooContact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/messageSending.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/pay.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/vojoohepardakhti.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Viewer/Viewer_Search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju-choose.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-history.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadkarchange.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/sendmsg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/sendreq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadjusee.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadkar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sidebar/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ChildFoundation3.iml" afterPath="$PROJECT_DIR$/.idea/ChildFoundation3.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/madadju/urls.py" afterPath="$PROJECT_DIR$/madadju/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/madadju/views.py" afterPath="$PROJECT_DIR$/madadju/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -207,8 +18,106 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="madadkarchange.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+              <folding>
+                <element signature="e#1190#1336#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="madadju.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madadju/templates/madadju/madadju.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin_Home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modir/templates/modir/Admin_Home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MySite/templates/MySite/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madadju/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="118" column="69" lean-forward="false" selection-start-line="118" selection-start-column="69" selection-end-line="118" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="madadju-base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="76" column="44" lean-forward="false" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#span#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/madadju/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modir/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="241" column="12" lean-forward="true" selection-start-line="241" selection-start-column="12" selection-end-line="242" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -241,6 +150,11 @@
         <option value="$PROJECT_DIR$/MySite/views.py" />
         <option value="$PROJECT_DIR$/modir/admin.py" />
         <option value="$PROJECT_DIR$/ChildFoundation3/urls.py" />
+        <option value="$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html" />
+        <option value="$PROJECT_DIR$/madadju/templates/madadju/madadju.html" />
+        <option value="$PROJECT_DIR$/madadju/views.py" />
+        <option value="$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html" />
+        <option value="$PROJECT_DIR$/madadju/urls.py" />
       </list>
     </option>
   </component>
@@ -250,10 +164,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="712" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -286,25 +201,137 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="ChildFoundation3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChildFoundation3" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modir" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modir" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modir" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="madadju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="madadju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="madadju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildFoundation3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -328,7 +355,238 @@
     </option>
   </component>
   <component name="RunManager" selected="Django server.ChildFoundation3">
-    <configuration name="ChildFoundation3" type="Python.DjangoServer" factoryName="Django server">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="ChildFoundation3" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ChildFoundation3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ChildFoundation3" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -350,7 +608,11 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Django server.ChildFoundation3" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -366,20 +628,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2823344" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28335625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2823344" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -387,10 +649,11 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -420,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -467,17 +729,7 @@
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modir/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -487,7 +739,7 @@
         <state relative-caret-position="300">
           <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -496,7 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,17 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MySite/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,7 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -531,7 +770,7 @@
         <state relative-caret-position="270">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -541,7 +780,7 @@
         <state relative-caret-position="420">
           <caret line="28" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -550,8 +789,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modir/static/modir/css/sidebar/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modir/static/css/sidebar/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadkar/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/karbar/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamyar/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChildFoundation3/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="53" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamyar/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MySite/templates/MySite/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MySite/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modir/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -564,70 +888,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modir/static/modir/css/sidebar/sidebar.css">
+    <entry file="file://$PROJECT_DIR$/modir/templates/modir/Admin_Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="63">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modir/static/css/sidebar/sidebar.css">
+    <entry file="file://$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/madadkar/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/madadju/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/karbar/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hamyar/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChildFoundation3/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="53" />
+        <state relative-caret-position="338">
+          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#1190#1336#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hamyar/views.py">
+    <entry file="file://$PROJECT_DIR$/madadju/templates/madadju/madadju.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modir/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="241" column="12" lean-forward="true" selection-start-line="241" selection-start-column="12" selection-end-line="242" selection-end-column="34" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="118" column="69" lean-forward="false" selection-start-line="118" selection-start-column="69" selection-end-line="118" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="76" column="44" lean-forward="false" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#span#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/madadju/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
