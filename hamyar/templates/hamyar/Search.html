@@ -11,41 +11,138 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
-                        <h3 style="font-family: 'B Nazanin';">جست و جو در میان مددجویان</h3>
+                        <h3 style="font-family: 'B Nazanin';">لیست وجوه پرداختی</h3>
                         <br>
 
+                        <form action="" method="post" style="direction: rtl">{% csrf_token %}
 
 
-                        <table class="table table-striped" style="align-content: right">
-{#                            <thead>#}
-{#                                <tr>#}
-{#                                    <th class="text-right">تاریخ</th>#}
-{#                                    <th class="text-right">مقصد</th>#}
-{#                                    <th class="text-right">مبلغ</th>#}
-{#                                    <th class="text-right">شناسه پرداخت</th>#}
-{#                                </tr>#}
-{#                            </thead>#}
-                            <tbody>
-                                <tr>
-                                    <td>1/1/1</td>
-                                    <td>کاربر1</td>
-                                    <td>1000</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>2/2/2</td>
-                                    <td>کاربر2</td>
-                                    <td>2000</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>3/3/3</td>
-                                    <td>کاربر3</td>
-                                    <td>3000</td>
-                                    <td>3</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            <center>
+                                <div class="form-group">
+                                    <select style="width: 500px" dir="rtl" class="form-control" id="gender"
+                                            name="gender">
+                                        <option value="0">جنسیت...</option>
+                                        <option value="girl">دختر</option>
+                                        <option value="boy">پسر</option>
+                                    </select>
+                                </div>
+                            </center>
+
+                            <center>
+                                <div class="form-group">
+                                    <select style="width: 500px" dir="rtl" class="form-control" id="fromage"
+                                            name="fromage">
+                                        <option value="0">از سن</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                    </select>
+                                </div>
+                            </center>
+
+                            <center>
+                                <div class="form-group">
+                                    <select style="width: 500px" dir="rtl" class="form-control" id="toage" name="toage">
+                                        <option value="0">تا سن</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                    </select>
+                                </div>
+                            </center>
+
+                            <center>
+                                <div class="form-group">
+                                    <select style="width: 500px" dir="rtl" class="form-control" id="physical_state"
+                                            name="physical_state">
+                                        <option value="0">وضعیت جسمی...</option>
+                                        <option value="1">سالم</option>
+                                        <option value="2">بیمار</option>
+                                        <option value="3">معلول</option>
+                                        <option value="4">ناشنوا</option>
+                                        <option value="5">سرطانی</option>
+                                        <option value="6">نابینا</option>
+                                        <option value="7">نیمه بینا</option>
+                                    </select>
+                                </div>
+                            </center>
+
+
+                            <center>
+                                <div class="form-group">
+                                    <select dir="rtl" style="width: 500px" class="form-control text-right" id="city" ,
+                                            name="city">
+                                        <option class="text-right" value="0">استان...</option>
+                                        <option value="1">آذربایجان غربی</option>
+                                        <option value="2">آذربایجان شرقی</option>
+                                        <option value="3">اردبیل</option>
+                                        <option value="4">اصفهان</option>
+                                        <option value="5">البرز</option>
+                                        <option value="6">ایلام</option>
+                                        <option value="7">بوشهر</option>
+                                        <option value="8">تهران</option>
+                                        <option value="9">چهار محال بختیاری</option>
+                                        <option value="10">خراسان جنوبی</option>
+                                        <option value="11">خراسان رضوی</option>
+                                        <option value="12">خراسان شمالی</option>
+                                        <option value="14">خوزستان</option>
+                                        <option value="15">زنجان</option>
+                                        <option value="16">سمنان</option>
+                                        <option value="17">سیستان و بلوچستان</option>
+                                        <option value="18">فارس</option>
+                                        <option value="19">قزوین</option>
+                                        <option value="20">قم</option>
+                                        <option value="21">کردستان</option>
+                                        <option value="22">کرمان</option>
+                                        <option value="23">کرمانشاه</option>
+                                        <option value="24">کهگیوله و بویر احمد</option>
+                                        <option value="25">گلستان</option>
+                                        <option value="26">گیلان</option>
+                                        <option value="27">لرستان</option>
+                                        <option value="28">مازندران</option>
+                                        <option value="29">مرکزی</option>
+                                        <option value="30">هرمزگان</option>
+                                        <option value="31">همدان</option>
+                                        <option value="32">یزد</option>
+                                    </select>
+                                </div>
+                            </center>
+
+
+                            <input type="submit" name="submit" tabindex="4"
+                                   class="form-control btn btn-login" value="جست و جو" placeholder="جست و جو">
+
+                        </form>
                     </div>
                 </div>
             </div>

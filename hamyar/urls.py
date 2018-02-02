@@ -20,4 +20,5 @@ urlpatterns = [
     path('send-message/', SendMessageView.as_view(), name='send-message'),
     path('edit_profile/', edit_profile, name = 'edit_profile'),
     path('logout/', logout, name='hamyar-logout'),
+    path('search_result/', SerchResultView, name='search-result'),
 ]

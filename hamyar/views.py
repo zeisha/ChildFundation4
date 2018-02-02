@@ -9,6 +9,7 @@ from karbar.models import MyUser
 from django.shortcuts import render, redirect
 from MySite.forms import ContactForm
 from .urls import *
+from madadju.models import Madadju
 
 
 @login_required()
@@ -98,9 +99,33 @@ class PayView(TemplateView):
 class PayReceiptView(TemplateView):
     template_name = 'hamyar/Pay_Receipt.html'
 
+
 @login_required()
 def SearchView(request):
-    return render(request, 'hamyar/Search.html')
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            mgender = request.POST.get('gender')
+            mfromage = request.POST.get('fromage')
+            mtoage = request.POST.get('toage')
+            mphysical_state = request.POST.get('physical_state')
+            mcity = request.POST.get('city')
+
+            Allmadadju = Madadju.objects.all()
+
+
+            madadjuList = []
+            for madadju in Allmadadju:
+                if(madadju.gender == mgender and madadju.age >= mfromage and
+                   madadju.age <= mtoage and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
+                    madadjuList.append(madadju)
+
+            return render(request, 'hamyar/Search_Result.html', {'list': madadjuList})
+        else:
+            return render(request, 'hamyar/Search.html')
+
+@login_required()
+def SerchResultView(request):
+    return render(request, 'hamyar/Search_Result.html')
 
 
 class SendMessageView(TemplateView):
