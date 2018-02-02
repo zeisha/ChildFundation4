@@ -80,9 +80,15 @@ class MadadjooContactView(TemplateView):
 def MadadjooListView(request):
     user = request.user
     myUser = MyUser.objects.get(user = request.user)
-    myHamyar = Hamyar.objects.get(user = MyUser)
-    list = Adapt.objects.filter(hamyar=myHamyar)
-    return render(request, 'hamyar/Madadjoo_List.html', {'list': list})
+    myHamyar = Hamyar.objects.get(user = myUser)
+
+    adaptList = Adapt.objects.filter(hamyar=myHamyar)
+
+    madadjuList = []
+    for adapt in adaptList:
+        madadjuList.append(adapt.madadju)
+
+    return render(request, 'hamyar/Madadjoo_List.html', {'list': madadjuList})
 
 
 class PayView(TemplateView):
@@ -92,9 +98,9 @@ class PayView(TemplateView):
 class PayReceiptView(TemplateView):
     template_name = 'hamyar/Pay_Receipt.html'
 
-
-class SearchView(TemplateView):
-    template_name = 'hamyar/Search.html'
+@login_required()
+def SearchView(request):
+    return render(request, 'hamyar/Search.html')
 
 
 class SendMessageView(TemplateView):
