@@ -44,9 +44,12 @@ class MadadjuContact(TemplateView):
             form.save()
             text = form.cleaned_data
             form = ContactForm()
-
+        context={}
+        message = "نظر شما با موفقیت ثبت شد"
+        context['message'] = message
+        context['type'] = 'green'
         args = {'form': form, 'text': text}
-        return render(request, self.template_name, args)
+        return render(request, 'madadju/madadju.html', context)
 
 @login_required
 def madadkarchange(request):
