@@ -2,203 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="033ddd4f-4a42-4b93-b441-4205f3b3e293" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/cf3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/chart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/goals.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/history.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/kid.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/kids.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo4.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/logo6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/images/madadkar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Hamyar_Register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/Home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/templates/MySite/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySite/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/static/hamyar/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Edit_Profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Ehda.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Ehda_Receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Enseraf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Entekhab.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Hamyar_Home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Letters_Box.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Madadjoo_Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Madadjoo_List.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Pay.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Pay_Receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Send_Message.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hamyar/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karbar/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/static/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju-history.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadju.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/madadkarchange.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/templates/madadju/sendmsg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadju/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/static/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/edit-madadju.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/editneed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/instantneed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/madadju-register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/madadkar-base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/managesaving.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/seemsg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/seerequests.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/success.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/templates/madadkar/taaligh.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/madadkar/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/static/modir/css/sidebar/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_History.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_Madadju_Report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Admin_edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Foundation_Kefalat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Foundation_Pardakht.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Foundation_Report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Hamyar_Register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/Madadkar_Register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/PaymentsMadadjuReports.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/PaymentsReport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/templates/modir/form-template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modir/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Chart-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Contact-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Goals-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/History-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/Home-Hamyar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/enseraf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/entekhab-madadjoo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/hadayaye-gheirenaghdi.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/letters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/madadjoo-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/madadjooContact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/messageSending.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/pay.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/receipt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Hamyar/vojoohepardakhti.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Viewer/Viewer_Search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju-choose.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadju-history.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/madadkarchange.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/sendmsg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadju/sendreq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadjusee.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/madadkar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sidebar/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hamyar/templates/hamyar/Madadjoo_List.html" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Madadjoo_List.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hamyar/templates/hamyar/Search.html" afterPath="$PROJECT_DIR$/hamyar/templates/hamyar/Search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hamyar/urls.py" afterPath="$PROJECT_DIR$/hamyar/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hamyar/views.py" afterPath="$PROJECT_DIR$/hamyar/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -287,7 +94,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,6 +105,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,9 +173,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.253125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -376,7 +183,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28335625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28343314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -404,7 +211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -412,7 +218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -420,7 +225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -428,7 +232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -436,9 +239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -446,9 +246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -456,9 +253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -466,9 +260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -476,9 +267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -486,9 +274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,7 +281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,9 +288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -514,7 +295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,7 +302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -530,9 +309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -540,9 +316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -550,9 +323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -560,7 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,7 +337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,7 +344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -584,7 +351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,7 +358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,7 +365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,9 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,9 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

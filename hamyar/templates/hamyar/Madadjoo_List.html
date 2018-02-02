@@ -4,6 +4,9 @@
     لیست ممدجویات تحت کفالت
 {% endblock %}
 
+{#{% block content %}#}
+{#{% endblock %}#}
+
 {% block content %}
     <!--page content-->
     <div id="page-content-wrapper" class="offset8">
@@ -20,17 +23,20 @@
                                     <br>
                                     <div style="direction: rtl">
                                         {% if list %}
-                                            {% for madadjoo in list %}
+                                            {% for madadju in list %}
                                                 <div class="col-sm-3 col-lg-4" style="float: right !important;">
                                                     <div class="thumbnail">
                                                         <div class="caption">
-                                                            <h5  style="background: #7a0134; font-family: 'B Nazanin'; font-size: 16px; font-weight: bold; color: white; padding: 10px; width: 100px; float: right; margin-left: 30px; border-radius: 20px">
-                                                                {{ madadjoo.user.user.first_name }}
-                                                            </h5>
+                                                            <h2  style="background: #7a0134; font-family: 'B Nazanin'; font-size: 20px; font-weight: bold; color: white; padding: 10px; width: 100px; margin-left: 30px; border-radius: 20px">
+                                                                  {{ madadju.user.user.first_name }}
+                                                            </h2>
                                                             <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">نام خانوادگی :
-                                                                {{ madadjoo.user.user.last_name }}
+                                                                {{ madadju.user.user.last_name }}
                                                             </h4>
-                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">سن : {{ madadjoo.age }}</h4>
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">سن :
+                                                                {{ madadju.age }}
+                                                            </h4>
+
                                                         </div>
                                                     </div>
                                                 </div>
