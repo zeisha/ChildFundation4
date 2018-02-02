@@ -55,10 +55,10 @@
               <li><a href={% url 'madadju-goals' %}>اهداف و دیدگاه ها</a></li>
             </ul>
             </li>
-                <li class="active"><a href={% url 'madadju-home' %}
+                <li class="active"><a
                                       style="color:#7a0134; font-family: 'B Nazanin'; font-size: 20px; alignment: right;"
                                       onMouseOver="this.style.color='#230007';"
-                                      onMouseOut="this.style.color='#7a0134';">بنیاد کودک</a></li>
+                                      onMouseOut="this.style.color='#7a0134';" href={% url 'madadju-home' %}>بنیاد کودک</a></li>
                  <li><img src="../../static/images/cf3.png"
                           style="width: 50px; height: 50px; opacity: 0.8; padding: 5px; alignment: right;"></li>
 
@@ -73,10 +73,11 @@
         <!--sidebar-->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav" style="font-family: 'B Mitra'; font-size: 20px; text-align: right;">
-            <li><a href={% url 'madadju-msg' %} style="text-:10px"> &nbsp &nbsp ارسال پیام &nbsp &nbsp </a></li>
+            <li><a href={% url 'madadju-msg' %} style="text-:10px"> &nbsp &nbsp ارسال پیام به مددکار &nbsp &nbsp </a></li>
+            <li><a href={% url 'madadju-msg2' %} style="text-:10px"> &nbsp &nbsp ارسال پیام به مدیر &nbsp &nbsp </a></li>
             <li><a href={% url 'madadju-madadkar-change' %}> &nbsp &nbsp تغییر مددکار &nbsp &nbsp </a></li>
             <li><a href={% url 'madadju-profile' %}> &nbsp &nbsp پروفایل کاربری &nbsp &nbsp </a></li>
-            <li><a href="#"> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
+            <li><a href={% url 'madadju-logout' %}> &nbsp &nbsp خروج &nbsp &nbsp </a></li>
         </ul>
     </div>
     <div class="modal fade" id="Login">

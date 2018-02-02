@@ -12,4 +12,6 @@ urlpatterns = [
     path('madadkar-change/', madadju.views.madadkarchange, name='madadju-madadkar-change'),
     path('profile/', madadju.views.madadjuprofile, name='madadju-profile'),
     path('sendmsg/', MadadjuMsg.as_view(), name='madadju-msg'),
+    path('sendmsg2/', MadadjuMsg2.as_view(), name='madadju-msg2'),
+    path('logout/', logout, name='madadju-logout'),
 ]

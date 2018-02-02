@@ -5,6 +5,8 @@ from madadju.models import Madadju
 from karbar.models import Message, MyUser
 from modir.models import Admin
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout as auth_logout
 
 from MySite.forms import ContactForm, MessageForm
 
@@ -42,25 +44,33 @@ class MadadjuContact(TemplateView):
             form.save()
             text = form.cleaned_data
             form = ContactForm()
-
+        context={}
+        message = "نظر شما با موفقیت ثبت شد"
+        context['message'] = message
+        context['type'] = 'green'
         args = {'form': form, 'text': text}
-        return render(request, self.template_name, args)
+        return render(request, 'madadju/madadju.html', context)
 
-
+@login_required
 def madadkarchange(request):
-    if (request.GET.get('mybtn')):
-        user = request.user
-        user = MyUser.objects.get(user=user)
-        user = Madadju.objects.get(user=user)
-        admin = Admin.objects.all()
-        text = 'لطفا مددکار مرا تغییر دهید'
+    print("salam")
+    context={}
+    print(request.user)
+    if request.POST.get('submit') == 'تائید':
         print("hi")
-        user=request.user
-        user=MyUser.objects.get(user=user)
+        user=MyUser.objects.get(user=request.user)
         user=Madadju.objects.get(user=user)
-        admin=Admin.objects.all()
+        user=user.user
+        admin=Admin.objects.get()
+        print(type(admin.user))
+        admin=admin.user
         text='لطفا مددکار مرا تغییر دهید'
-        Message.objects.create(text=text, sender=user, receiver=admin)
+        message=Message.objects.create(text=text, sender=user, receiver=admin)
+        message.save()
+        message="درخواست شما جهت بررسی به مدیر فرستاده شد"
+        context['message'] = message
+        context['type'] = 'green'
+        return render(request,"madadju/madadju.html",context)
     return render(request, "madadju/madadkarchange.html")
 
 
@@ -76,6 +86,10 @@ class MadadjuMsg(TemplateView):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
+        message = "پیام با موفقیت ارسال شد"
+        context={}
+        context['message'] = message
+        context['type'] = 'green'
         form = MessageForm(request.POST)
         sender = request.user
         text = request.POST.get('text')
@@ -84,11 +98,44 @@ class MadadjuMsg(TemplateView):
         madadju = Madadju.objects.get(user=u)
         receiver = madadju.current_madadkar
         receiver = receiver.user
-        context = {'sender': u, 'text': text, 'receiver': receiver}
+        #context = {'sender': u, 'text': text, 'receiver': receiver}
         if form.is_valid():
             message = Message.objects.create(sender=u, receiver=receiver, text=text)
             message.save()
-            return HttpResponseRedirect(reverse('hamyar-home'))
+            return render(request,'madadju/madadju.html',context)
 
         context['form'] = form
         return render(request, self.template_name, context)
+
+
+class MadadjuMsg2(TemplateView):
+    template_name = 'madadju/sendmsg2.html'
+
+    def get(self, request, **kwargs):
+        form = MessageForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        message = "پیام با موفقیت ارسال شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        form = MessageForm(request.POST)
+        text = request.POST.get('text')
+        user = request.user
+        u = MyUser.objects.get(user=user)
+        admin = Admin.objects.get()
+        admin = admin.user
+        #context = {'sender': u, 'text': text, 'receiver': admin}
+        if form.is_valid():
+            message = Message.objects.create(sender=u, receiver=admin, text=text)
+            message.save()
+            return render(request, 'madadju/madadju.html', context)
+
+        context['form'] = form
+        return render(request, self.template_name, context)
+
+
+def logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect(reverse('home'))
