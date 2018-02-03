@@ -15,4 +15,5 @@ urlpatterns = [
     path('contact/', ContactView.as_view(), name='contact'),
     path('login/', login, name='login'),
     path('register/', RegisterView.as_view(), name='hamyar-register'),
+    path('hamyar-profile/', include('hamyar.urls2'), name="hamyar-profile"),
 ]

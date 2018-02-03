@@ -13,6 +13,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        {% if message %}
+                                    <div class="text-primary" style="direction: rtl; color: green; font-family: 'B Nazanin'; font-size: 20px;"> {{ form.errors.value }} {{ message }} </div>
+                        {% endif %}
                         <h1 class="text-right" id="bonyad">بنیاد خیریه کودکان</h1>
                         <img src="../../static/images/kids.jpg" class="img-responsive" style="margin: 50px auto">
                         <p class="text-right" id="mashi"> خط مشی موسسه خیریه رفاه کودک، بر اهمیت به تحصیل و آموزش استوار

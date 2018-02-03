@@ -89,7 +89,12 @@ class AdminHamyarRegisterView(View):
                 member.save()
                 hamyar = Hamyar.objects.create(user=member, report_method=report_method)
                 hamyar.save()
-                return HttpResponseRedirect(reverse('hamyar-home'))
+                # return HttpResponseRedirect(reverse('hamyar-home'))
+                message = "با موفقیت ثبت نام کردید. اکنون میتوانید وارد سایت شوید"
+                context = {}
+                context['message'] = message
+                context['type'] = 'green'
+                return render(request, 'MySite/Home.html', context)
             else:
                 phone_number_error = "شماره تلفن باید 11 رقمی باشد و با 09 آغاز شود."
                 context['phone_number_error'] = phone_number_error

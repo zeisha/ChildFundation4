@@ -128,6 +128,10 @@ def SerchResultView(request):
 
 
 
+
+
+
+@login_required()
 def ModirMessageView (request):
     if request.method == 'GET':
         form = MessageForm()
@@ -145,13 +149,13 @@ def ModirMessageView (request):
         admin = Admin.objects.get()
         admin = admin.user
         #context = {'sender': u, 'text': text, 'receiver': admin}
-        if form.is_valid():
-            message = Message.objects.create(sender=u, receiver=admin, text=text)
-            message.save()
-            return render(request, 'hamyar/Hamyar_Home.html', context)
+        #if form.is_valid(): #TODO zeinab
+        message = Message.objects.create(sender=u, receiver=admin, text=text)
+        message.save()
+        return render(request, 'hamyar/Hamyar_Home.html', context)
 
-        context['form'] = form
-        return render(request, 'hamyar/Modir_Message.html', context)
+        # context['form'] = form
+        # return render(request, 'hamyar/Modir_Message.html', context)
 
 
 
@@ -184,3 +188,20 @@ def edit_profile(request):
                 hamyar.save()
                 return render(request, 'hamyar/Hamyar_Home.html')
     return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'myUser': myUser, 'hamyar':hamyar})
+
+
+
+
+def ProfileView(request, username):
+    print(username)
+    myUserList = MyUser.objects.all()
+
+    mUser = MyUser()
+    for myUser in myUserList:
+        if myUser.user.username == username:
+            mUser = MyUser
+            break
+
+    hamyar = Hamyar.objects.get(user=myUser)
+
+    return render(request, 'hamyar/Profile.html', {'hamyar': hamyar})
