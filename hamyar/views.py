@@ -10,14 +10,14 @@ from django.shortcuts import render, redirect
 from MySite.forms import ContactForm
 from .urls import *
 from madadju.models import Madadju
+from karbar.forms import MessageForm
+from modir.models import Admin
+from karbar.models import Message
 
 
 @login_required()
 def HamyarHomeView(request):
     return render(request, "hamyar/Hamyar_Home.html")
-
-# class HamyarHomeView(TemplateView):
-#     template_name = 'hamyar/Hamyar_Home.html'
 
 
 class HamyarGoalsView(TemplateView):
@@ -111,25 +111,48 @@ def SearchView(request):
             mcity = request.POST.get('city')
 
             Allmadadju = Madadju.objects.all()
-
-
             madadjuList = []
             for madadju in Allmadadju:
-                if(madadju.gender == mgender and madadju.age >= mfromage and
-                   madadju.age <= mtoage and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
+                if(madadju.gender == mgender and madadju.age >= int(mfromage) and
+                   madadju.age <= int(mtoage) and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
                     madadjuList.append(madadju)
 
             return render(request, 'hamyar/Search_Result.html', {'list': madadjuList})
         else:
             return render(request, 'hamyar/Search.html')
 
+
 @login_required()
 def SerchResultView(request):
     return render(request, 'hamyar/Search_Result.html')
 
 
-class SendMessageView(TemplateView):
-    template_name = 'hamyar/Send_Message.html'
+
+def ModirMessageView (request):
+    if request.method == 'GET':
+        form = MessageForm()
+        return render(request, 'hamyar/Modir_Message.html', {'form': form})
+
+    if request.method == 'POST':
+        message = "پیام با موفقیت ارسال شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        form = MessageForm(request.POST)
+        text = request.POST.get('text')
+        user = request.user
+        u = MyUser.objects.get(user=user)
+        admin = Admin.objects.get()
+        admin = admin.user
+        #context = {'sender': u, 'text': text, 'receiver': admin}
+        if form.is_valid():
+            message = Message.objects.create(sender=u, receiver=admin, text=text)
+            message.save()
+            return render(request, 'hamyar/Hamyar_Home.html', context)
+
+        context['form'] = form
+        return render(request, 'hamyar/Modir_Message.html', context)
+
 
 
 def logout(request):
@@ -159,6 +182,5 @@ def edit_profile(request):
                 hamyar.report_method = request.POST.get('report_method')
                 myUser.save()
                 hamyar.save()
-                # return render(request, 'hamyar/Hamyar_Home.html', {'user': user}) #TODO zeinab
-                return HttpResponseRedirect(reverse('hamyar-home'))
+                return render(request, 'hamyar/Hamyar_Home.html')
     return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'myUser': myUser, 'hamyar':hamyar})
