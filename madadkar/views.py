@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from MySite.forms import ContactForm
+from django.contrib.auth import logout as auth_logout
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 
 def madadkarhome(request):
@@ -36,9 +39,13 @@ class MadadkarContact(TemplateView):
             form.save()
             text = form.cleaned_data
             form = ContactForm()
+            context = {}
+            message = "نظر شما با موفقیت ثبت شد"
+            context['message'] = message
+            context['type'] = 'green'
 
         args = {'form': form, 'text': text}
-        return render(request, self.template_name, args)
+        return render(request, 'madadkar/home.html', context)
 
 
 def madadkarprofile(request):
@@ -87,3 +94,7 @@ def success(request):
 
 def taaligh(request):
     return render(request, "madadkar/taaligh.html")
+
+def logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect(reverse('home'))

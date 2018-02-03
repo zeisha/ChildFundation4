@@ -16,8 +16,9 @@ urlpatterns = [
     path('madadjoo-list/', MadadjooListView, name='madadjoo-list'),
     path('pay/', PayView.as_view(), name='pay'),
     path('pay-receipt/', PayReceiptView.as_view(), name='pay-receipt'),
-    path('search/', SearchView.as_view(), name='search'),
+    path('search/', SearchView, name='search'),
     path('send-message/', SendMessageView.as_view(), name='send-message'),
     path('edit_profile/', edit_profile, name = 'edit_profile'),
     path('logout/', logout, name='hamyar-logout'),
+    path('search_result/', SerchResultView, name='search-result'),
 ]

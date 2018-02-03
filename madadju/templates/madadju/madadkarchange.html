@@ -17,8 +17,18 @@
                         <br>
                         <p style="font-family: 'B Nazanin'; font-size: 28px;">آیا برای تغییر مددکار خود مطمئن هستید؟</p>
                         <br>
-                            <form action="#" method="get">
-                                 <button type="button" name="mybtn" class="btn" data-toggle="modal" data-target="#popUpWindow" value="Click" style="color: white; background-color: #3f001f; border-radius: 8px; font-family: 'B Nazanin'; font-size: 20px;">تائید</button>
+                            <form action="#" method="post" class="well form-horizontal">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3 pull-right">
+                                           {% csrf_token %}
+                                            <input type="submit" name="submit" id="delete-submit" tabindex="4"
+                                                   style="alignment: right; font-family: 'B Nazanin'; margin-right: 10px; font-size: 22px; border-radius:8px; color:white; background-color: #670925" value="تائید"
+                                                   placeholder="تائید">
+
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                     </div>
                 </div>

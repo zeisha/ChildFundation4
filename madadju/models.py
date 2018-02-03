@@ -11,6 +11,11 @@ class Madadju(models.Model):
     grade = models.CharField(max_length=20)
     account = models.IntegerField()
     saving = models.IntegerField()
+    GENDER_CHOICES = (
+        ('مرد', 'Male'),
+        ('زن', 'Female'),
+    )
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES,default='مرد')
     current_madadkar = models.ForeignKey(Madadkar, default=None, blank=True,
                                          null=True, on_delete=models.SET_NULL)
 
