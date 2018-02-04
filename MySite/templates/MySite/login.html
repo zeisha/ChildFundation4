@@ -34,11 +34,7 @@
                                                    value="{% if type == 'login' and form8 %} {{ form.username.value }} {% endif %}">
                                         </div>
                                     </div>
-                                    {% if form.username.errors and type == 'login' %}
-                                        <span class="text-danger" style="text-align:center;">
-                    {% for error in form.username.errors %}{{ error }}{% endfor %}
-                </span>
-                                    {% endif %}
+
                                 </div>
                                 {% if type != 'forger_password' %}
                                     <div class="form-group {% if form.password.errors and type == 'login' %}has-error{% endif %}">
