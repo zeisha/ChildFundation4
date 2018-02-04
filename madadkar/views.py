@@ -9,6 +9,8 @@ from madadju.models import Madadju
 from karbar.models import MyUser
 from django.contrib.auth.models import User
 import datetime
+from karbar.forms import SignupForm2
+from madadkar.models import Madadkar
 
 
 def madadkarhome(request):
@@ -133,3 +135,31 @@ def taaligh(request):
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+
+def madadkarprofile(request):
+    user = request.user
+    user_form = SignupForm2(instance=user)
+    myUser = MyUser.objects.get(user=request.user)
+    madadkar = Madadkar.objects.get(user=myUser)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            user_form = SignupForm2(request.POST, instance=request.user)
+            # myUser = MyUser.objects.get(user=request.user)
+            if user_form.is_valid():
+                print("valid")
+                user_form.save()
+                myUser.user = request.user
+                myUser.phone_number = request.POST.get('phone_number')
+                myUser.national_id = request.POST.get('national_id')
+                myUser.country = request.POST.get('country')
+                myUser.city = request.POST.get('city')
+                myUser.address = request.POST.get('address')
+                myUser.postal_code = request.POST.get('postal_code')
+                madadkar.employment_date = request.POST.get('employment_date')
+                myUser.save()
+                madadkar.save()
+                return render(request, 'madadkar/home.html', {'message':"تغییرات با موفقیت ثبت شد"})
+            else:
+                print(user_form.errors)
+    return render(request, 'madadkar/profile.html', {'user': user, 'myUser': myUser, 'madadkar':madadkar})

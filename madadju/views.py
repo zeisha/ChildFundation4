@@ -7,7 +7,7 @@ from modir.models import Admin
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
-from karbar.forms import SignupForm1
+from karbar.forms import SignupForm2
 from hamyar.models import Adapt,Hamyar
 from django.contrib.auth.models import User
 from MySite.forms import ContactForm, MessageForm
@@ -78,12 +78,12 @@ def madadkarchange(request):
 
 def madadjuprofile(request):
     user = request.user
-    user_form = SignupForm1(instance=user)
+    user_form = SignupForm2(instance=user)
     myUser = MyUser.objects.get(user=request.user)
     madadju = Madadju.objects.get(user=myUser)
     if request.user.is_authenticated:
         if request.method == 'POST':
-            user_form = SignupForm1(request.POST, instance=request.user)
+            user_form = SignupForm2(request.POST, instance=request.user)
             # myUser = MyUser.objects.get(user=request.user)
             if user_form.is_valid():
                 print("valid")

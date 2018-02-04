@@ -11,6 +11,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                    {% if message %}
+                                    <div class="text-primary" style="direction: rtl; color: green; font-family: 'B Nazanin'; font-size: 20px;"> {{ form.errors.value }} {{ message }} </div>
+                                {% endif %}
                         <p style="text-align: right; font-family: 'B Nazanin'; font-size: 30px; font-weight: bold;">
                             پروفایل کاربر</p>
                         <br>
@@ -117,28 +120,6 @@
 
 
 
-                                <tr>
-                                    <td><label for="password">رمز </label></td>
-                                    <td><input type="password" name="password1" id="password" class=" {% if form.password2.errors %}has-error{% endif %}">
-                                        {% if form.password2.errors %}
-                                            <span class="text-danger">
-                                                <p>{% for error in form.password2.errors %}{{ error }}{% endfor %}</p>
-                                            </span>
-                                        {% endif %}
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td><label for="passworda">تایید رمز </label></td>
-                                    <td><input type="password" name="password2" id="passworda " class=" {% if form.password2.errors %}has-error{% endif %}">
-                                        {% if form.password2.errors %}
-                                            <span class="text-danger">
-                                                <p>{% for error in form.password2.errors %}{{ error }}{% endfor %}</p>
-                                            </span>
-                                        {% endif %}
-                                    </td>
-                                </tr>
 
                             </table>
 
