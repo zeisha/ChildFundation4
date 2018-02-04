@@ -1,4 +1,4 @@
-{% extends 'hamyar/Base.html' %}
+p{% extends 'hamyar/Base.html' %}
 
 {% block title %}
     پروفایل همیار
@@ -10,31 +10,79 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
-                        <h3 style="font-family: 'B Nazanin';">لیست وجوه پرداختی</h3>
+                        <h3 style="font-family: 'B Nazanin';">پروفایل</h3>
                         <br>
 
                         <table class="table table-striped" style="align-content: right">
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td>کاربر1</td>
-                                    <td>1000</td>
-                                    <td>1</td>
+                                    <td>{{ hamyar.user.user.first_name }}</td>
+                                    <td>نام</td>
                                 </tr>
                                 <tr>
-                                    <td>2/2/2</td>
-                                    <td>کاربر2</td>
-                                    <td>2000</td>
-                                    <td>2</td>
+                                    <td>{{ hamyar.user.user.last_name }}</td>
+                                    <td>نام خانوادگی</td>
                                 </tr>
                                 <tr>
-                                    <td>3/3/3</td>
-                                    <td>کاربر3</td>
-                                    <td>3000</td>
-                                    <td>3</td>
+                                    <td>{{ hamyar.user.user.username }}</td>
+                                    <td>نام کاربری</td>
                                 </tr>
+
                             </tbody>
                         </table>
+
+{#                        <div id="page-content-wrapper" class="offset8">#}
+{#        <div class="container-fluid">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-12">#}
+{#                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">#}
+                        <section id="signup">
+                            <form class="well form-horizontal" style="direction: rtl" action="" method="post"
+                                  id="signup_form">{% csrf_token %}
+                                <fieldset>
+                                    <legend>
+                                        <center><h5><b>ارسال پیام به {{ hamyar.user.user.first_name }}</b></h5></center>
+                                    </legend>
+                                    <br>
+
+                                    <div class="form-group  {% if form.text.errors %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                           class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></i></span>
+                                                <textarea name="text" placeholder="متن"
+                                                          class="form-control" type="text"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.text.errors %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.text.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <input type="submit" name="submit" id="register-submit"
+                                                       tabindex="4" class="form-control btn btn-register"
+                                                       value="ارسال پیام"
+                                                       placeholder="ارسال پیام"
+                                                       style="width: auto; left: 50%; position: inherit; background-color: #3f001f; color: white; font-family: 'B Nazanin'; font-size: 20px; border-radius: 5px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#   </div>#}
+
+
+
                     </div>
                 </div>
             </div>

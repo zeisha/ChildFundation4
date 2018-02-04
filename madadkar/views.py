@@ -98,3 +98,6 @@ def taaligh(request):
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+def ProfileView(request, username):
+    return render(request, 'madadkar/profile.html')

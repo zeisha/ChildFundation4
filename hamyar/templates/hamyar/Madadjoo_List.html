@@ -28,14 +28,25 @@
                                                     <div class="thumbnail">
                                                         <div class="caption">
                                                             <h2  style="background: #7a0134; font-family: 'B Nazanin'; font-size: 20px; font-weight: bold; color: white; padding: 10px; width: 100px; margin-left: 30px; border-radius: 20px">
+                                                                <a href="/madadju-profile/{{ madadju.user.user.username }}">
                                                                   {{ madadju.user.user.first_name }}
-                                                            </h2>
+                                                                </a></h2>
                                                             <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">نام خانوادگی :
                                                                 {{ madadju.user.user.last_name }}
                                                             </h4>
                                                             <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">سن :
                                                                 {{ madadju.age }}
                                                             </h4>
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href="/madadkar-profile/{{ madadju.current_madadkar.user.user.username }}">مددکار فعلی :
+                                                                {{ madadju.current_madadkar.user.user.last_name }}
+                                                            </a></h4>
+
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href="/madadju-pay/{{ madadju.user.user.username }}">صفجه پرداخت به مددجو
+                                                            </a></h4>
+
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href="/madadju-ehda/{{ madadju.user.user.username }}">اهدای هدایای غیرنقدی
+                                                            </a></h4>
+
 
                                                         </div>
                                                     </div>

@@ -16,4 +16,9 @@ urlpatterns = [
     path('login/', login, name='login'),
     path('register/', RegisterView.as_view(), name='hamyar-register'),
     path('hamyar-profile/', include('hamyar.urls2'), name="hamyar-profile"),
+    path('madadkar-profile/', include('madadkar.urls2'), name="madadkar-profile"),
+    path('madadju-profile/', include('madadju.urls2'), name="madadju-profile"),
+    path('madadju-pay/', include('hamyar.urls3'), name="madadju-pay"),
+    path('madadju-ehda/', include('hamyar.urls4'), name="madadju-ehda"),
+
 ]

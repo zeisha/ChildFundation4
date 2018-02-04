@@ -15,9 +15,11 @@ class Madadju(models.Model):
         ('مرد', 'Male'),
         ('زن', 'Female'),
     )
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES,default='مرد')
+    gender = models.CharField(max_length=10, choices=GENDER_CHOICES,default='مرد')
     current_madadkar = models.ForeignKey(Madadkar, default=None, blank=True,
                                          null=True, on_delete=models.SET_NULL)
+    percent = models.IntegerField(default= 100)
+    using = models.IntegerField(default=0)
 
 
 class Need(models.Model):

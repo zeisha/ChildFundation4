@@ -13,6 +13,9 @@ from madadju.models import Madadju
 from karbar.forms import MessageForm
 from modir.models import Admin
 from karbar.models import Message
+import datetime, random
+from hamyar.forms import PaymentForm, GiftForm
+from hamyar.models import Payment, Gift
 
 
 @login_required()
@@ -40,12 +43,36 @@ class EnserafView(TemplateView):
     template_name = 'hamyar/Enseraf.html'
 
 
-class EntekhabView(TemplateView):
-    template_name = 'hamyar/Entekhab.html'
 
+@login_required()
+def EhdaView(request, username):
+    myUserList = MyUser.objects.all()
+    for myUser in myUserList:
+        if myUser.user.username == username:
+            break
+    madadju = Madadju.objects.get(user=myUser)
+    madadkar = madadju.current_madadkar
 
-class EhdaView(TemplateView):
-    template_name = 'hamyar/Ehda.html'
+    if request.method == 'POST':
+        form = GiftForm(request.POST)
+        content = request.POST.get('content')
+        now = datetime.datetime.now()
+
+        myUser = MyUser.objects.get(user=request.user)
+        hamyar = Hamyar.objects.get(user=myUser)
+        if form.is_valid():
+            print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
+            gift = Gift.objects.create(date = now, madadju = madadju, hamyar = hamyar, content = content, madadkar = madadkar)
+            gift.save()
+            print(gift.date)
+            print(gift.content)
+            return render(request, 'hamyar/Ehda_Receipt.html', {'gift': gift})
+        else:
+            return render(request, 'hamyar/Ehda_Receipt.html')
+
+    if request.method == 'GET':
+        form = GiftForm()
+        return render(request, 'hamyar/Ehda.html', {'madadju': madadju})
 
 
 class EhdaReceiptView(TemplateView):
@@ -92,8 +119,51 @@ def MadadjooListView(request):
     return render(request, 'hamyar/Madadjoo_List.html', {'list': madadjuList})
 
 
-class PayView(TemplateView):
-    template_name = 'hamyar/Pay.html'
+@login_required()
+def PayView(request, username):
+
+    myUserList = MyUser.objects.all()
+    for myUser in myUserList:
+        if myUser.user.username == username:
+            break
+    madadju = Madadju.objects.get(user=myUser)
+
+    if request.method == 'POST':
+        form = PaymentForm(request.POST)
+        now = datetime.datetime.now()
+        value = request.POST.get('value')
+        receipt_number = random.randint(10000000, 100000000)
+
+        myUser = MyUser.objects.get(user=request.user)
+        hamyar = Hamyar.objects.get(user=myUser)
+
+        kind = request.POST.get('kind')
+
+        if form.is_valid():
+
+            print("---------------------------------------------------------------")
+            print(madadju.using)
+            print("---------------------------------------------------------------")
+            madadju.using += int((int(value) * madadju.percent)/100)
+            print(madadju.using)
+            print("---------------------------------------------------------------")
+            print(madadju.saving)
+            print("---------------------------------------------------------------")
+            madadju.saving += int(value) - madadju.using
+            print(madadju.saving)
+            madadju.save()
+
+            receipt = Payment.objects.create(date = now, value = value, receipt_number = receipt_number,
+                                             madadju = madadju, hamyar = hamyar, kind = kind)
+            receipt.save()
+            return render(request, 'hamyar/Pay_Receipt.html', {'receipt' : receipt})
+        else:
+            return render(request, 'hamyar/Pay_Receipt.html')
+
+    if request.method == 'GET':
+        form = PaymentForm()
+        return render(request, 'hamyar/Pay.html', {'madadju': madadju})
+
 
 
 class PayReceiptView(TemplateView):
@@ -192,16 +262,30 @@ def edit_profile(request):
 
 
 
+@login_required()
 def ProfileView(request, username):
-    print(username)
-    myUserList = MyUser.objects.all()
 
-    mUser = MyUser()
+    myUserList = MyUser.objects.all()
     for myUser in myUserList:
         if myUser.user.username == username:
-            mUser = MyUser
             break
-
     hamyar = Hamyar.objects.get(user=myUser)
 
-    return render(request, 'hamyar/Profile.html', {'hamyar': hamyar})
+    if request.method == 'GET':
+        form = MessageForm()
+        return render(request, 'hamyar/Profile.html', {'hamyar': hamyar, 'form': form})
+
+    if request.method == 'POST':
+        message = "پیام با موفقیت ارسال شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        form = MessageForm(request.POST)
+        text = request.POST.get('text')
+        user = request.user
+        u = MyUser.objects.get(user=user)
+        #context = {'sender': u, 'text': text, 'receiver': admin}
+        #if form.is_valid(): #TODO zeinab
+        message = Message.objects.create(sender=u, receiver=myUser, text=text)
+        message.save()
+        return render(request, 'hamyar/Hamyar_Home.html', context)

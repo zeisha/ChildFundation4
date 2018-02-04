@@ -9,6 +9,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 
 from MySite.forms import ContactForm, MessageForm
+from hamyar.forms import PaymentForm
+import datetime, random
+from hamyar.models import Hamyar, Payment
 
 
 def madadjuhome(request):
@@ -139,3 +142,8 @@ class MadadjuMsg2(TemplateView):
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+
+def ProfileView(request, username):
+    return render(request, 'madadju/profile.html')
+
