@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from karbar.forms import SignupForm1
 from hamyar.models import Adapt,Hamyar
-
+from django.contrib.auth.models import User
 from MySite.forms import ContactForm, MessageForm
 
 
@@ -170,12 +170,9 @@ def logout(request):
 
 
 def madadjuviewh(request, username):
-
-    myUserList = MyUser.objects.all()
-    for myUser in myUserList:
-        if myUser.user.username == username:
-            break
-    madadju = Madadju.objects.get(user=myUser)
+    user = User.objects.get(username=username)
+    user=MyUser.objects.get(user=user)
+    madadju = Madadju.objects.get(user=user)
 
     if request.method == 'GET':
         form = MessageForm()
@@ -189,7 +186,7 @@ def madadjuviewh(request, username):
         user = request.user
         u = MyUser.objects.get(user=user)
         hamyar= Hamyar.objects.get(user=u)
-        madadju=request.madadju
         adapt= Adapt.objects.create(madadju=madadju, hamyar=hamyar)
+        adapt.save()
         context['adapt']=adapt
         return render(request, 'hamyar/Hamyar_Home.html', context)
