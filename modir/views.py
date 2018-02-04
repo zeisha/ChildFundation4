@@ -12,7 +12,7 @@ from django.views import generic
 from datetime import date
 
 from MySite.forms import ContactForm
-from karbar.forms import SignupForm1
+from karbar.forms import SignupForm1, SignupForm2
 from karbar.models import MyUser
 from hamyar.models import Hamyar, PaymentFoundation, Payment
 from madadkar.models import Madadkar
@@ -249,9 +249,12 @@ def edit_profile(request, pk):
     print('***************')
     print(pk)
     myUser = MyUser.objects.get(pk=pk)
+    print(myUser)
     user = User.objects.get(username=myUser.user.username)
+    print(user)
     if request.method == 'POST':
-        user_form = SignupForm1(request.POST, instance=user)
+        print('hiii')
+        user_form = SignupForm2(request.POST, instance=user)
         if user_form.is_valid():
             print("valid")
             user_form.save()
@@ -277,5 +280,5 @@ def edit_profile(request, pk):
                         hamyar = Hamyar.objects.get(user=myUser)
                         hamyar.save()
 
-            return render(request, 'modir/Admin_Home.html')
-    return render(request, 'admin-edit', {'user': user, 'myUser': myUser, pk: pk})
+            return render(request, 'modir/edit_detail.html', {'user': user, 'myUser': myUser, pk: pk})
+    return render(request, 'modir/edit_detail.html', {'user': user, 'myUser': myUser, pk: pk})
