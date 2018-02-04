@@ -4,6 +4,11 @@ from MySite.forms import ContactForm
 from django.contrib.auth import logout as auth_logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from madadju.forms import ReportForm
+from madadju.models import Madadju
+from karbar.models import MyUser
+from django.contrib.auth.models import User
+import datetime
 
 
 def madadkarhome(request):
@@ -76,8 +81,38 @@ def receipt(request):
     return render(request, "madadkar/receipt.html")
 
 
-def report(request):
-    return render(request, "madadkar/report.html")
+class Report(TemplateView):
+    template_name = 'madadkar/report.html'
+
+    def get(self, request, **kwargs):
+        form = ReportForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = ReportForm(request.POST)
+        text = None
+        id = request.POST.get('text')
+        user=User.objects.get(username=id)
+        user=MyUser.objects.get(user=user)
+        madadju=Madadju.objects.get(user=user)
+        date = datetime.datetime.now()
+        if(madadju!=None):
+            title=request.POST.get('title')
+            content=request.POST.get('content')
+            report=Report.objects.create(madadju=madadju, content=content, title=title, date=date)
+        if form.is_valid():
+            # post = form.save(commit=False)
+            # post.user = request.user
+            # post.save()
+            form.save()
+            text = form.cleaned_data
+            form = ContactForm()
+        context={}
+        message = "نظر شما با موفقیت ثبت شد"
+        context['message'] = message
+        context['type'] = 'green'
+        args = {'form': form, 'text': text}
+        return render(request, 'madadju/madadju.html', context)
 
 
 def seemsg(request):
