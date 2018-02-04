@@ -13,16 +13,45 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
-                       <h1 style="font-family: 'B Nazanin';">ثبت گزارش دوره ای مددجو</h1>
-                        <br>
-                        <form style="font-family: 'B Nazanin'; font-size: 20px;">
-                            <p style="color: #7a0134;"> &nbsp&nbspکد ملی
-                            <br>
-                                <button type="button" class="btn" data-toggle="modal" data-target="#popUpWindow" style="color: white; background-color: #3f001f; border-radius: 8px; font-family: 'B Nazanin'; font-size: 20px;">تائید</button>
-                                &nbsp &nbsp
-                                <input type="number" name="id" style=" border-radius: 8px; border-style: ridge;">
-                            <br>
-                            <br>
+                       <form class="well form-horizontal" style="direction: rtl" action="" method="post"
+                                  id="signup_form">{% csrf_token %}
+                                <fieldset>
+                                    <legend>
+                                        <center><h2><b> ثبت گزارش</b></h2></center>
+                                        <br>
+                                        <h3>لطفا شناسه مددجو مورد نظر را وارد کنید</h3>
+                                    </legend>
+                                    <br>
+
+                                    <div class="form-group  {% if form.text.errors %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                           class="glyphicon glyphicon-user" style="margin-right: 5px;"></i></span>
+                                                <input name="text" placeholder="شناسه"
+                                                          class="form-control" type="text"></input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.text.errors %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.text.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <input type="submit" name="submit" id="register-submit"
+                                                       tabindex="4" class="form-control btn btn-register"
+                                                       value="تائید"
+                                                       placeholder="تائید"
+                                                       style="width: auto; left: 50%; position: inherit; background-color: #3f001f; color: white; font-family: 'B Nazanin'; font-size: 20px; border-radius: 5px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -40,17 +69,23 @@
                                     </div>
 
                                     <!-- body (form) -->
-                                    <div class="modal-body">
-                                        <form role="form">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control text-right"
-                                                       placeholder="عنوان گزارش">
-                                            </div>
-                                            <div class="form-group text-right">
-                                                <label for="comment">شرح گزارش</label>
-                                                <textarea class="form-control" rows="5" id="comment" style="text-align: right;"></textarea>
-                                            </div>
+                                    <div class="modal-body text-right">
+                                        <form role="form" method="post">
+                                            {% csrf_token %}
+                                            {% for field in form %}
+                                                {{ field }}
+                                                <label class="label label-default"
+                                                       style="direction: rtl; font-family: 'B Mitra'; font-weight:bold; font-size: 13px; padding: 5px;">{{ field.label_tag }}</label>
 
+                                                <br>
+                                            {% endfor %}
+                                            <br>
+                                            <!-- button -->
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary btn-block"
+                                                        style="background: #850032">ثبت
+                                                </button>
+                                            </div>
                                         </form>
                                     </div>
 

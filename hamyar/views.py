@@ -104,11 +104,12 @@ class MadadjooContactView(TemplateView):
         args = {'form': form, 'text': text}
         return render(request, self.template_name, args)
 
+
 @login_required()
 def MadadjooListView(request):
     user = request.user
-    myUser = MyUser.objects.get(user = request.user)
-    myHamyar = Hamyar.objects.get(user = myUser)
+    myUser = MyUser.objects.get(user=request.user)
+    myHamyar = Hamyar.objects.get(user=myUser)
 
     adaptList = Adapt.objects.filter(hamyar=myHamyar)
 
@@ -183,8 +184,9 @@ def SearchView(request):
             Allmadadju = Madadju.objects.all()
             madadjuList = []
             for madadju in Allmadadju:
-                if(madadju.gender == mgender and madadju.age >= int(mfromage) and
-                   madadju.age <= int(mtoage) and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
+                if (madadju.gender == mgender and madadju.age >= int(mfromage) and
+                            madadju.age <= int(
+                            mtoage) and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
                     madadjuList.append(madadju)
 
             return render(request, 'hamyar/Search_Result.html', {'list': madadjuList})
@@ -197,12 +199,8 @@ def SerchResultView(request):
     return render(request, 'hamyar/Search_Result.html')
 
 
-
-
-
-
 @login_required()
-def ModirMessageView (request):
+def ModirMessageView(request):
     if request.method == 'GET':
         form = MessageForm()
         return render(request, 'hamyar/Modir_Message.html', {'form': form})
@@ -218,8 +216,8 @@ def ModirMessageView (request):
         u = MyUser.objects.get(user=user)
         admin = Admin.objects.get()
         admin = admin.user
-        #context = {'sender': u, 'text': text, 'receiver': admin}
-        #if form.is_valid(): #TODO zeinab
+        # context = {'sender': u, 'text': text, 'receiver': admin}
+        # if form.is_valid(): #TODO zeinab
         message = Message.objects.create(sender=u, receiver=admin, text=text)
         message.save()
         return render(request, 'hamyar/Hamyar_Home.html', context)
@@ -228,10 +226,10 @@ def ModirMessageView (request):
         # return render(request, 'hamyar/Modir_Message.html', context)
 
 
-
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
+
 
 @login_required
 def edit_profile(request):
@@ -257,9 +255,7 @@ def edit_profile(request):
                 myUser.save()
                 hamyar.save()
                 return render(request, 'hamyar/Hamyar_Home.html')
-    return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'myUser': myUser, 'hamyar':hamyar})
-
-
+    return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'myUser': myUser, 'hamyar': hamyar})
 
 
 @login_required()

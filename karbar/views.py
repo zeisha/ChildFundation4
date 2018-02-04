@@ -38,6 +38,6 @@ def login(request):
                 else:
                     message = 'حساب شما غیر فعال شده است.'
             else:
-                message = 'نام کاربری شناخته شده نیست. لطفا ابتدا عضو شوید.'
+                message = 'نام کاربری یا رمز ورود اشتباه است.'
             context = {'type': 'login', 'form': form, 'message': message}
     return render(request, 'MySite/login.html', context)
