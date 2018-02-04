@@ -20,6 +20,7 @@ class Madadju(models.Model):
                                          null=True, on_delete=models.SET_NULL)
     percent = models.IntegerField(default= 100)
     using = models.IntegerField(default=0)
+    ban=models.BooleanField(default=False)
 
 
 class Need(models.Model):

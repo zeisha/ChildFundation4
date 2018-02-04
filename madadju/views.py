@@ -12,7 +12,8 @@ from MySite.forms import ContactForm, MessageForm
 from hamyar.forms import PaymentForm
 import datetime, random
 from hamyar.models import Hamyar, Payment
-
+from django.contrib.auth.models import User
+from hamyar.models import Adapt
 
 def madadjuhome(request):
     return render(request, 'madadju/madadju.html')
@@ -144,6 +145,25 @@ def logout(request):
     return HttpResponseRedirect(reverse('home'))
 
 
-def ProfileView(request, username):
-    return render(request, 'madadju/profile.html')
+def madadjuviewh(request, username):
+    user = User.objects.get(username=username)
+    user=MyUser.objects.get(user=user)
+    madadju = Madadju.objects.get(user=user)
+
+    if request.method == 'GET':
+        form = MessageForm()
+        return render(request, 'madadju/madadju-choose.html', {'madadju': madadju, 'form': form})
+
+    if request.method == 'POST':
+        message = "مددجو به سرپرستی گرفته شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        user = request.user
+        u = MyUser.objects.get(user=user)
+        hamyar= Hamyar.objects.get(user=u)
+        adapt= Adapt.objects.create(madadju=madadju, hamyar=hamyar)
+        adapt.save()
+        context['adapt']=adapt
+        return render(request, 'hamyar/Hamyar_Home.html', context)
 

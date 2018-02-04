@@ -1,0 +1,91 @@
+p{% extends 'madadkar/madadkar-base.html' %}
+
+{% block title %}
+    پروفایل مددکار
+{% endblock %}
+
+{% block content %}
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pull-right" style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right; width: 87%;">
+                        <h3 style="font-family: 'B Nazanin';">پروفایل مددکار</h3>
+                        <br>
+
+                        <table class="table table-striped" style="align-content: right; direction: ltr; text-align: right; font-family: 'B Nazanin'; font-size: 20px; ">
+                            <tbody>
+                                <tr>
+                                    <td>{{ madadkar.user.user.first_name }}</td>
+                                    <td style="font-weight: bold;">نام</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ madadkar.user.user.last_name }}</td>
+                                    <td style="font-weight: bold;">نام خانوادگی</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ madadkar.user.user.username }}</td>
+                                    <td style="font-weight: bold;">نام کاربری</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+{#                        <div id="page-content-wrapper" class="offset8">#}
+{#        <div class="container-fluid">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-12">#}
+{#                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">#}
+                        <section id="signup">
+                            <form class="well form-horizontal" style="direction: rtl" action="" method="post"
+                                  id="signup_form">{% csrf_token %}
+                                <fieldset>
+                                    <legend>
+                                        <center><h5><b>ارسال پیام به {{ madadkar.user.user.first_name }}</b></h5></center>
+                                    </legend>
+                                    <br>
+
+                                    <div class="form-group  {% if form.text.errors %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                           class="glyphicon glyphicon-envelope" style="margin-right: 5px;"></i></span>
+                                                <textarea name="text" placeholder="متن"
+                                                          class="form-control" type="text"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if form.text.errors %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {% for error in form.text.errors %}{{ error }}{% endfor %}
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <input type="submit" name="submit" id="register-submit"
+                                                       tabindex="4" class="form-control btn btn-register"
+                                                       value="ارسال"
+                                                       placeholder="ارسال"
+                                                       style="width: auto; left: 50%; position: inherit; background-color: #3f001f; color: white; font-family: 'B Nazanin'; font-size: 20px; border-radius: 5px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#   </div>#}
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -13,6 +13,9 @@ from karbar.forms import SignupForm2, SignupForm1
 from madadkar.models import Madadkar
 from django.contrib.auth import authenticate, login as auth_login
 from django.views import View
+from MySite.forms import MessageForm
+from hamyar.models import Hamyar
+from karbar.models import Message
 
 def madadkarhome(request):
     return render(request, "madadkar/home.html")
@@ -198,8 +201,9 @@ class MadadkarMadadjuregister(View):
                 member = MyUser.objects.create(user=user, phone_number=phone_number, country=country, city=city,
                                                postal_code=postal_code, address=address, national_id=national_id)
                 member.save()
-                madadkar = Madadkar.objects.create(user=member, gender=gender, grade=grade, age=age, physical_state=physical_state)
-                madadkar.save()
+                madadju = Madadju.objects.create(user=member, gender=gender, grade=grade, age=age, physical_state=physical_state, account=0, saving=0)
+                madadju.save()
+                context['message'] = "مددجو با موفقیت ساخته شد"
                 return HttpResponseRedirect(reverse('madadju-home'))
             else:
                 phone_number_error = "شماره تلفن باید 11 رقمی باشد و با 09 آغاز شود."
@@ -207,4 +211,30 @@ class MadadkarMadadjuregister(View):
         context['form'] = form
         context['type'] = 'signup'
         return render(request, 'madadkar/madadju-register.html', context)
+
+
+
+
+def madadkarviewh(request, username):
+    user = User.objects.get(username=username)
+    user=MyUser.objects.get(user=user)
+    madadkar = Madadkar.objects.get(user=user)
+
+    if request.method == 'GET':
+        form = MessageForm()
+        return render(request, 'madadkar/madadkar.html', {'madadkar': madadkar, 'form': form})
+
+    if request.method == 'POST':
+        message = "پیام با موفقیت ارسال شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        user = request.user
+        u = MyUser.objects.get(user=user)
+        hamyar= Hamyar.objects.get(user=u)
+        text=request.POST.get('text')
+        hamyar=hamyar.user
+        madadkar=madadkar.user
+        message=Message.objects.create(sender=hamyar, receiver=madadkar, text=text)
+        return render(request, 'hamyar/Hamyar_Home.html', context)
 

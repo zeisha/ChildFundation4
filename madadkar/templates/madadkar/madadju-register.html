@@ -271,6 +271,25 @@
                                         </span>
                                     {% endif %}
 
+                                <div class="form-group {% if gender_error and type == 'signup' %}has-error{% endif %}">
+                                        <div class="col-md-12 inputGroupContainer">
+                                            <div class="input-group">
+                                                    <span class="input-group-addon"><i
+                                                            class="glyphicon glyphicon-road"></i></span>
+                                                <select name="gender" placeholder="جنسیت"
+                                                       class="form-control" type="text">
+                                                    <option value="Male" name="Male">مرد</option>
+                                                    <option value="Female" name="Female">زن</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if gender_error and type == 'signup' %}
+                                        <span class="text-danger" style="text-align:center;">
+                                            {{ gender_error}}
+                                        </span>
+                                    {% endif %}
+
 
 
 
