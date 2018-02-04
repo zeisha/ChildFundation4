@@ -18,4 +18,7 @@ urlpatterns = [
     path('edit-user/<int:pk>', edit_profile, name='admin-edit'),
     path('search/', SearchView, name='modir-search'),
     path('search_result/', SerchResultView, name='modir-search-result'),
+    path('madadjoo-list/', MadadjooListView, name='modir-madadjoo-list'),
+    # path('messages', login_required(ChooseUserEditView.as_view()), name='admin-messages'),
+    # path('edit-user/<int:pk>', edit_profile, name='admin-message-detail'),
 ]
