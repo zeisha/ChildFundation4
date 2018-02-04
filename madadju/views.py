@@ -139,3 +139,18 @@ class MadadjuMsg2(TemplateView):
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+
+def profile(request, username):
+    print(username)
+    myUserList = MyUser.objects.all()
+
+    mUser = MyUser()
+    for myUser in myUserList:
+        if myUser.user.username == username:
+            mUser = MyUser
+            break
+
+    madadju = Madadju.objects.get(user=myUser)
+
+    return render(request, 'hamyar/Profile.html', {'hamyar': hamyar})
