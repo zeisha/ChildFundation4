@@ -16,6 +16,7 @@ urlpatterns = [
     path('login/', login, name='login'),
     path('register/', RegisterView.as_view(), name='hamyar-register'),
     path('hamyar-profile/', include('hamyar.urls2'), name="hamyar-profile"),
+    path('madadju-profile/', include('madadju.urls2'), name="madadju-profile"),
     # TODO
     # path('madadju-search/', , name='madadju-search'),
 ]
