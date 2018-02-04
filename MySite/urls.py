@@ -19,6 +19,7 @@ urlpatterns = [
     path('madadkar-profile/', include('madadkar.urls2'), name="madadkar-profile"),
     path('madadju-profile/', include('madadju.urls2'), name="madadju-profile"),
     path('madadju-pay/', include('hamyar.urls3'), name="madadju-pay"),
+    path('madadju-pay2/', include('modir.urls2'), name="modir-madadju-pay"),
     path('madadju-ehda/', include('hamyar.urls4'), name="madadju-ehda"),
     path('search/', SearchView, name='viewer-search'),
     path('search_result/', SerchResultView, name='viewer-search-result'),

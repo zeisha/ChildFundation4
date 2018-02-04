@@ -1,0 +1,57 @@
+{% extends 'modir/Base.html' %}
+
+
+{% block title %}
+   پرداخت
+{% endblock %}
+
+{% block content %}
+
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
+                        <h3 style="font-family: 'B Nazanin';">پرداخت</h3>
+                        <br>
+
+                        <form action="" method="post" style="direction: rtl">{% csrf_token %}
+
+
+                            <center>
+                                <div class="form-group">
+                                    <select style="width: 500px" dir="rtl" class="form-control" id="kind"
+                                            name="kind">
+                                        <option value="0">نوع...</option>
+                                        <option value="ماهیانه">ماهیانه</option>
+                                        <option value="دفعه ای">دفعه ای</option>
+                                    </select>
+                                </div>
+                            </center>
+
+
+                            <center>
+                                <div class="form-group">
+                                    <select style="width: 500px" dir="rtl" class="form-control" id="value" name="value">
+                                        <option value="0">مبلغ...</option>
+                                        <option value="10000">10000</option>
+                                        <option value="20000">20000</option>
+                                        <option value="50000">50000</option>
+                                        <option value="100000">100000</option>
+                                        <option value="200000">200000</option>
+                                    </select>
+                                </div>
+                            </center>
+
+
+                            <input type="submit" name="submit" tabindex="4"
+                                   class="form-control btn btn-login" value="پرداخت" placeholder="پرداخت">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,3 +1,6 @@
+import random
+import datetime, random
+
 from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
@@ -11,13 +14,14 @@ from django.views import generic
 
 from datetime import date
 
+from hamyar.forms import PaymentForm, GiftForm
 from MySite.forms import ContactForm
 from karbar.forms import SignupForm1, SignupForm2
-from karbar.models import MyUser
+from karbar.models import MyUser, Message
 from hamyar.models import Hamyar, PaymentFoundation, Payment
 from madadkar.models import Madadkar
 from madadju.models import Madadju
-from .models import Admin
+from .models import Admin, AdminPayment
 from .forms import DeleteUserForm
 
 
@@ -308,3 +312,63 @@ def SearchView(request):
 @login_required()
 def SerchResultView(request):
     return render(request, 'modir/Search_Result.html')
+
+
+@login_required()
+def MadadjooListView(request):
+    madadjuList = []
+    for madadju in Madadju.objects.all():
+        madadjuList.append(madadju)
+
+    return render(request, 'modir/Madadjoo_List.html', {'list': madadjuList})
+
+
+@login_required()
+def PayView(request, username):
+    myUserList = MyUser.objects.all()
+    for myUser in myUserList:
+        if myUser.user.username == username:
+            break
+    madadju = Madadju.objects.get(user=myUser)
+
+    if request.method == 'POST':
+        form = PaymentForm(request.POST)
+        now = datetime.datetime.now()
+        value = request.POST.get('value')
+        kind = request.POST.get('kind')
+        receipt_number = random.randint(10000000, 100000000)
+
+        if form.is_valid():
+            print(madadju.saving)
+            madadju.using += int((int(value) * madadju.percent) / 100)
+            madadju.saving += int(value) - madadju.using
+            madadju.save()
+
+            receipt = AdminPayment(date=now, value=value,
+                                   madadju=madadju, kind=kind, receipt_number=receipt_number)
+            receipt.save()
+
+            return render(request, 'modir/Pay_Receipt.html', {'receipt': receipt})
+
+    if request.method == 'GET':
+        return render(request, 'modir/Pay.html', {'madadju': madadju})
+
+
+class PayReceiptView(TemplateView):
+    template_name = 'modir/Pay_Receipt.html'
+
+
+class MessagesView(generic.ListView):
+    login_required = True
+    template_name = 'modir/messages.html'
+
+    context_object_name = 'all_messages'
+
+    def get_queryset(self):
+        return Message.objects.all()
+
+
+class UserEditView(generic.DetailView):
+    login_required = True
+    model = MyUser
+    template_name = 'modir/edit_detail.html'
