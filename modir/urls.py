@@ -14,4 +14,6 @@ urlpatterns = [
     path('user-delete/', delete_user, name='admin-delete'),
     path('payments/', login_required(PaymentView.as_view()), name='admin-payment'),
     path('payments-madadju/', login_required(PaymentMadadjuView.as_view()), name='admin-payment-madadju'),
+    path('edit-chooseuser', login_required(ChooseUserEditView.as_view()), name='admin-edit-chooseuser'),
+    path('edit-user/<int:pk>', edit_profile, name='admin-edit'),
 ]

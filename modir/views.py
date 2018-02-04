@@ -226,3 +226,56 @@ class PaymentMadadjuView(generic.ListView):
 
     def get_queryset(self):
         return Payment.objects.all()
+
+
+class ChooseUserEditView(generic.ListView):
+    login_required = True
+    template_name = 'modir/users_edit.html'
+
+    context_object_name = 'all_users'
+
+    def get_queryset(self):
+        return MyUser.objects.all()
+
+
+class UserEditView(generic.DetailView):
+    login_required = True
+    model = MyUser
+    template_name = 'modir/edit_detail.html'
+
+
+@login_required
+def edit_profile(request, pk):
+    print('***************')
+    print(pk)
+    myUser = MyUser.objects.get(pk=pk)
+    user = User.objects.get(username=myUser.user.username)
+    if request.method == 'POST':
+        user_form = SignupForm1(request.POST, instance=user)
+        if user_form.is_valid():
+            print("valid")
+            user_form.save()
+            myUser.phone_number = request.POST.get('phone_number')
+            myUser.national_id = request.POST.get('national_id')
+            myUser.country = request.POST.get('country')
+            myUser.city = request.POST.get('city')
+            myUser.address = request.POST.get('address')
+            myUser.postal_code = request.POST.get('postal_code')
+            myUser.save()
+            try:
+                modir = Admin.objects.get(user=myUser)
+                modir.save()
+            except Admin.DoesNotExist:
+                try:
+                    madadkar = Madadkar.objects.get(user=myUser)
+                    madadkar.save()
+                except Madadkar.DoesNotExist:
+                    try:
+                        madadju = Madadju.objects.get(user=myUser)
+                        madadju.save()
+                    except Madadju.DoesNotExist:
+                        hamyar = Hamyar.objects.get(user=myUser)
+                        hamyar.save()
+
+            return render(request, 'modir/Admin_Home.html')
+    return render(request, 'admin-edit', {'user': user, 'myUser': myUser, pk: pk})
