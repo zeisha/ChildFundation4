@@ -8,6 +8,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from karbar.forms import SignupForm1
+from hamyar.models import Adapt,Hamyar
 
 from MySite.forms import ContactForm, MessageForm
 
@@ -165,3 +166,30 @@ class MadadjuMsg2(TemplateView):
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+
+
+def madadjuviewh(request, username):
+
+    myUserList = MyUser.objects.all()
+    for myUser in myUserList:
+        if myUser.user.username == username:
+            break
+    madadju = Madadju.objects.get(user=myUser)
+
+    if request.method == 'GET':
+        form = MessageForm()
+        return render(request, 'madadju/madadju-choose.html', {'madadju': madadju, 'form': form})
+
+    if request.method == 'POST':
+        message = "مددجو به سرپرستی گرفته شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        user = request.user
+        u = MyUser.objects.get(user=user)
+        hamyar= Hamyar.objects.get(user=u)
+        madadju=request.madadju
+        adapt= Adapt.objects.create(madadju=madadju, hamyar=hamyar)
+        context['adapt']=adapt
+        return render(request, 'hamyar/Hamyar_Home.html', context)
