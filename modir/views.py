@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views import generic
 
@@ -365,10 +365,19 @@ class MessagesView(generic.ListView):
     context_object_name = 'all_messages'
 
     def get_queryset(self):
-        return Message.objects.all()
+        messages = []
+        for m in Message.objects.all():
+            if m.receiver == Admin.objects.all()[0].user:
+                messages.append(m)
+        return messages
 
 
-class UserEditView(generic.DetailView):
-    login_required = True
-    model = MyUser
-    template_name = 'modir/edit_detail.html'
+@login_required
+def message_detail(request, pk):
+    message = Message.objects.get(pk=pk)
+    message.delete()
+    messages = []
+    for m in Message.objects.all():
+        if m.receiver == Admin.objects.all()[0].user:
+            messages.append(m)
+        return HttpResponseRedirect(reverse('admin-messages'))

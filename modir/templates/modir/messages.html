@@ -1,7 +1,7 @@
 {% extends 'modir/base.html' %}
 
 {% block title %}
-پیام‌ها و درخواست‌ها
+    پیام‌ها و درخواست‌ها
 {% endblock %}
 
 
@@ -24,16 +24,15 @@
                                     <br>
                                     <div style="direction: rtl">
                                         {% if all_messages %}
-                                            {% for user in all_users %}
+                                            {% for message in all_messages %}
                                                 <div class="col-sm-3 col-lg-4" style="float: right !important;">
                                                     <div class="thumbnail">
                                                         <div class="caption">
-                                                            {#                                                            <h4>{{ user.user.first_name }} {{ user.user.last_name }}</h4>#}
-                                                            <h4 class="text-center"
-                                                                style="background: #7a0134; font-family: 'B Nazanin'; font-size: 13px; font-weight: bold; color: white; padding: 10px; width: 50%; float: right; margin-left: 30px; border-radius: 20px">{{ user.user.first_name }} {{ user.user.last_name }}</h4>
+                                                            <h4 style="font-weight: bold; color:#7a0134">فرستنده: {{ message.sender }}</h4>
+                                                            {{ message.text }}
                                                             <br>
                                                             <br>
-                                                            <a class="btn btn-default" href="{% url 'admin-edit' user.pk %}"> {{ user.user.username }}</a>
+                                                            <a href="{% url 'admin-message-detail' message.pk%}">بررسی شد.</a>
                                                         </div>
                                                     </div>
                                                 </div>

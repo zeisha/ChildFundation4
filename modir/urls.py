@@ -19,6 +19,6 @@ urlpatterns = [
     path('search/', SearchView, name='modir-search'),
     path('search_result/', SerchResultView, name='modir-search-result'),
     path('madadjoo-list/', MadadjooListView, name='modir-madadjoo-list'),
-    # path('messages', login_required(ChooseUserEditView.as_view()), name='admin-messages'),
-    # path('edit-user/<int:pk>', edit_profile, name='admin-message-detail'),
+    path('messages', login_required(MessagesView.as_view()), name='admin-messages'),
+    path('message-detail/<int:pk>', message_detail, name='admin-message-detail'),
 ]
