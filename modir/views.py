@@ -246,8 +246,6 @@ class UserEditView(generic.DetailView):
 
 @login_required
 def edit_profile(request, pk):
-    print('***************')
-    print(pk)
     myUser = MyUser.objects.get(pk=pk)
     print(myUser)
     user = User.objects.get(username=myUser.user.username)
@@ -282,3 +280,31 @@ def edit_profile(request, pk):
 
             return render(request, 'modir/edit_detail.html', {'user': user, 'myUser': myUser, pk: pk})
     return render(request, 'modir/edit_detail.html', {'user': user, 'myUser': myUser, pk: pk})
+
+
+@login_required()
+def SearchView(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            mgender = request.POST.get('gender')
+            mfromage = request.POST.get('fromage')
+            mtoage = request.POST.get('toage')
+            mphysical_state = request.POST.get('physical_state')
+            mcity = request.POST.get('city')
+
+            Allmadadju = Madadju.objects.all()
+            madadjuList = []
+            for madadju in Allmadadju:
+                if (madadju.gender == mgender and madadju.age >= int(mfromage) and
+                            madadju.age <= int(
+                            mtoage) and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
+                    madadjuList.append(madadju)
+
+            return render(request, 'modir/Search_Result.html', {'list': madadjuList})
+        else:
+            return render(request, 'modir/Search.html')
+
+
+@login_required()
+def SerchResultView(request):
+    return render(request, 'modir/Search_Result.html')

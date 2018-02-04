@@ -16,4 +16,6 @@ urlpatterns = [
     path('payments-madadju/', login_required(PaymentMadadjuView.as_view()), name='admin-payment-madadju'),
     path('edit-chooseuser', login_required(ChooseUserEditView.as_view()), name='admin-edit-chooseuser'),
     path('edit-user/<int:pk>', edit_profile, name='admin-edit'),
+    path('search/', SearchView, name='modir-search'),
+    path('search_result/', SerchResultView, name='modir-search-result'),
 ]

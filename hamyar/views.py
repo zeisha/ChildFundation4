@@ -43,7 +43,6 @@ class EnserafView(TemplateView):
     template_name = 'hamyar/Enseraf.html'
 
 
-
 @login_required()
 def EhdaView(request, username):
     myUserList = MyUser.objects.all()
@@ -62,7 +61,7 @@ def EhdaView(request, username):
         hamyar = Hamyar.objects.get(user=myUser)
         if form.is_valid():
             print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
-            gift = Gift.objects.create(date = now, madadju = madadju, hamyar = hamyar, content = content, madadkar = madadkar)
+            gift = Gift.objects.create(date=now, madadju=madadju, hamyar=hamyar, content=content, madadkar=madadkar)
             gift.save()
             print(gift.date)
             print(gift.content)
@@ -122,7 +121,6 @@ def MadadjooListView(request):
 
 @login_required()
 def PayView(request, username):
-
     myUserList = MyUser.objects.all()
     for myUser in myUserList:
         if myUser.user.username == username:
@@ -145,7 +143,7 @@ def PayView(request, username):
             print("---------------------------------------------------------------")
             print(madadju.using)
             print("---------------------------------------------------------------")
-            madadju.using += int((int(value) * madadju.percent)/100)
+            madadju.using += int((int(value) * madadju.percent) / 100)
             print(madadju.using)
             print("---------------------------------------------------------------")
             print(madadju.saving)
@@ -154,17 +152,16 @@ def PayView(request, username):
             print(madadju.saving)
             madadju.save()
 
-            receipt = Payment.objects.create(date = now, value = value, receipt_number = receipt_number,
-                                             madadju = madadju, hamyar = hamyar, kind = kind)
+            receipt = Payment.objects.create(date=now, value=value, receipt_number=receipt_number,
+                                             madadju=madadju, hamyar=hamyar, kind=kind)
             receipt.save()
-            return render(request, 'hamyar/Pay_Receipt.html', {'receipt' : receipt})
+            return render(request, 'hamyar/Pay_Receipt.html', {'receipt': receipt})
         else:
             return render(request, 'hamyar/Pay_Receipt.html')
 
     if request.method == 'GET':
         form = PaymentForm()
         return render(request, 'hamyar/Pay.html', {'madadju': madadju})
-
 
 
 class PayReceiptView(TemplateView):
@@ -260,7 +257,6 @@ def edit_profile(request):
 
 @login_required()
 def ProfileView(request, username):
-
     myUserList = MyUser.objects.all()
     for myUser in myUserList:
         if myUser.user.username == username:
@@ -280,8 +276,8 @@ def ProfileView(request, username):
         text = request.POST.get('text')
         user = request.user
         u = MyUser.objects.get(user=user)
-        #context = {'sender': u, 'text': text, 'receiver': admin}
-        #if form.is_valid(): #TODO zeinab
+        # context = {'sender': u, 'text': text, 'receiver': admin}
+        # if form.is_valid(): #TODO zeinab
         message = Message.objects.create(sender=u, receiver=myUser, text=text)
         message.save()
         return render(request, 'hamyar/Hamyar_Home.html', context)

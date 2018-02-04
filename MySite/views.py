@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
+from madadju.models import Madadju
 
 
 def home(request):
@@ -89,3 +90,28 @@ class RegisterView(TemplateView):
         context['form'] = form
         context['type'] = 'signup'
         return render(request, 'MySite/Hamyar_Register.html', context)
+
+
+def SearchView(request):
+    if request.method == 'POST':
+        mgender = request.POST.get('gender')
+        mfromage = request.POST.get('fromage')
+        mtoage = request.POST.get('toage')
+        mphysical_state = request.POST.get('physical_state')
+        mcity = request.POST.get('city')
+
+        Allmadadju = Madadju.objects.all()
+        madadjuList = []
+        for madadju in Allmadadju:
+            if (madadju.gender == mgender and madadju.age >= int(mfromage) and
+                        madadju.age <= int(
+                        mtoage) and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
+                madadjuList.append(madadju)
+
+        return render(request, 'MySite/Search_Result.html', {'list': madadjuList})
+    else:
+        return render(request, 'MySite/Search.html')
+
+
+def SerchResultView(request):
+    return render(request, 'MySite/Search_Result.html')

@@ -11,3 +11,13 @@ madadkar/__pycache__/urls.cpython-36.pyc
 madadkar/__pycache__/views.cpython-36.pyc
 modir/__pycache__/urls.cpython-36.pyc
 modir/__pycache__/views.cpython-36.pyc
+db.sqlite3
+madadju/__pycache__/views.cpython-36.pyc
+madadkar/__pycache__/views.cpython-36.pyc
+modir/__pycache__/models.cpython-36.pyc
+modir/__pycache__/views.cpython-36.pyc
+*.pyc
+modir/__pycache__/models.cpython-36.pyc
+modir/__pycache__/views.cpython-36.pyc
+madadkar/__pycache__/views.cpython-36.pyc
+madadju/__pycache__/views.cpython-36.pyc

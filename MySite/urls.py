@@ -20,5 +20,6 @@ urlpatterns = [
     path('madadju-profile/', include('madadju.urls2'), name="madadju-profile"),
     path('madadju-pay/', include('hamyar.urls3'), name="madadju-pay"),
     path('madadju-ehda/', include('hamyar.urls4'), name="madadju-ehda"),
-
+    path('search/', SearchView, name='viewer-search'),
+    path('search_result/', SerchResultView, name='viewer-search-result'),
 ]
