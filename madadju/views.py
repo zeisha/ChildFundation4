@@ -13,6 +13,7 @@ from hamyar.models import Hamyar, Payment
 from django.contrib.auth.models import User
 from hamyar.models import Adapt
 
+
 def madadjuhome(request):
     return render(request, 'madadju/madadju.html')
 
@@ -46,33 +47,34 @@ class MadadjuContact(TemplateView):
             form.save()
             text = form.cleaned_data
             form = ContactForm()
-        context={}
+        context = {}
         message = "نظر شما با موفقیت ثبت شد"
         context['message'] = message
         context['type'] = 'green'
         args = {'form': form, 'text': text}
         return render(request, 'madadju/madadju.html', context)
 
+
 @login_required
 def madadkarchange(request):
     print("salam")
-    context={}
+    context = {}
     print(request.user)
     if request.POST.get('submit') == 'تائید':
         print("hi")
-        user=MyUser.objects.get(user=request.user)
-        user=Madadju.objects.get(user=user)
-        user=user.user
-        admin=Admin.objects.get()
+        user = MyUser.objects.get(user=request.user)
+        user = Madadju.objects.get(user=user)
+        user = user.user
+        admin = Admin.objects.get()
         print(type(admin.user))
-        admin=admin.user
-        text='لطفا مددکار مرا تغییر دهید'
-        message=Message.objects.create(text=text, sender=user, receiver=admin)
+        admin = admin.user
+        text = 'لطفا مددکار مرا تغییر دهید'
+        message = Message.objects.create(text=text, sender=user, receiver=admin)
         message.save()
-        message="درخواست شما جهت بررسی به مدیر فرستاده شد"
+        message = "درخواست شما جهت بررسی به مدیر فرستاده شد"
         context['message'] = message
         context['type'] = 'green'
-        return render(request,"madadju/madadju.html",context)
+        return render(request, "madadju/madadju.html", context)
     return render(request, "madadju/madadkarchange.html")
 
 
@@ -89,7 +91,7 @@ class MadadjuMsg(TemplateView):
 
     def post(self, request):
         message = "پیام با موفقیت ارسال شد"
-        context={}
+        context = {}
         context['message'] = message
         context['type'] = 'green'
         form = MessageForm(request.POST)
@@ -100,11 +102,11 @@ class MadadjuMsg(TemplateView):
         madadju = Madadju.objects.get(user=u)
         receiver = madadju.current_madadkar
         receiver = receiver.user
-        #context = {'sender': u, 'text': text, 'receiver': receiver}
+        # context = {'sender': u, 'text': text, 'receiver': receiver}
         if form.is_valid():
             message = Message.objects.create(sender=u, receiver=receiver, text=text)
             message.save()
-            return render(request,'madadju/madadju.html',context)
+            return render(request, 'madadju/madadju.html', context)
 
         context['form'] = form
         return render(request, self.template_name, context)
@@ -128,7 +130,7 @@ class MadadjuMsg2(TemplateView):
         u = MyUser.objects.get(user=user)
         admin = Admin.objects.get()
         admin = admin.user
-        #context = {'sender': u, 'text': text, 'receiver': admin}
+        # context = {'sender': u, 'text': text, 'receiver': admin}
         if form.is_valid():
             message = Message.objects.create(sender=u, receiver=admin, text=text)
             message.save()
@@ -145,12 +147,12 @@ def logout(request):
 
 def madadjuviewh(request, username):
     user = User.objects.get(username=username)
-    user=MyUser.objects.get(user=user)
+    user = MyUser.objects.get(user=user)
     madadju = Madadju.objects.get(user=user)
 
     if request.method == 'GET':
         form = MessageForm()
-        if(Hamyar.objects.filter(user=MyUser.objects.get(user=request.user)).exists()):
+        if (Hamyar.objects.filter(user=MyUser.objects.get(user=request.user)).exists()):
             return render(request, 'madadju/madadju-choose.html', {'madadju': madadju, 'form': form})
         else:
             return render(request, 'madadju/madadju-choose1.html', {'madadju': madadju, 'form': form})
@@ -162,23 +164,27 @@ def madadjuviewh(request, username):
         context['type'] = 'green'
         user = request.user
         u = MyUser.objects.get(user=user)
-        kafil=None
-        hamyarlist=Hamyar.objects.all()
+        kafil = None
+        hamyarlist = Hamyar.objects.all()
         for hamyar in hamyarlist:
             if (Hamyar.objects.filter(user=u).exists()):
                 kafil = Hamyar.objects.get(user=u)
-                adapt=Adapt.objects.create(madadju=madadju, hamyar=kafil)
-                adapt.save()
+                adapt = Adapt.objects.create(madadju=madadju, hamyar=kafil)
+                if adapt not in Adapt.objects.all():
+                    adapt.save()
+                else:
+                    adapt.delete()
                 context['adapt'] = adapt
                 return render(request, 'hamyar/Hamyar_Home.html', context)
-        if (kafil==None):
-            kafil=Admin.objects.get(user=u)
-            adapt= Adapt2.objects.create(madadju=madadju, admin=kafil)
-            adapt.save()
+        if (kafil == None):
+            kafil = Admin.objects.get(user=u)
+            adapt = Adapt2.objects.create(madadju=madadju, admin=kafil)
+            if adapt not in Adapt2.objects.all():
+                adapt.save()
+            else:
+                adapt.delete()
             context['adapt'] = adapt
             return render(request, 'modir/Admin_Home.html', context)
-
-
 
 
 def madadjuprofile(request):
@@ -200,15 +206,13 @@ def madadjuprofile(request):
                 myUser.address = request.POST.get('address')
                 myUser.postal_code = request.POST.get('postal_code')
                 madadju.physical_state = request.POST.get('physical_state')
-                madadju.age=request.POST.get('age')
-                madadju.grade=request.POST.get('grade')
-                madadju.gender=request.POST.get('gender')
+                madadju.age = request.POST.get('age')
+                madadju.grade = request.POST.get('grade')
+                madadju.gender = request.POST.get('gender')
                 myUser.save()
                 madadju.save()
                 message = "تغییرات با موفقیت ثبت شد"
                 context = {}
                 context['message'] = message
                 return render(request, 'madadju/madadju.html', context)
-    return render(request, 'madadju/profile.html', {'user': user, 'myUser': myUser, 'madadju':madadju})
-
-
+    return render(request, 'madadju/profile.html', {'user': user, 'myUser': myUser, 'madadju': madadju})
