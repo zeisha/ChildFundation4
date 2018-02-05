@@ -240,3 +240,13 @@ class Report(TemplateView):
         context['type'] = 'green'
         args = {'form': form, 'text': text}
         return render(request, 'madadju/madadju.html', context)
+
+
+
+def MadadjooListView(request):
+    myUser = MyUser.objects.get(user=request.user)
+    myMadadkar = Madadkar.objects.get(user=myUser)
+
+    list = Madadju.objects.filter(current_madadkar=myMadadkar)
+
+    return render(request, 'madadkar/Madadjoo_List.html', {'list': list})
