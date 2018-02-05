@@ -1,7 +1,7 @@
 {% extends 'madadkar/madadkar-base.html' %}
 
 {% block title %}
-    لیست ممدجویان
+    لیست مددجویان
 {% endblock %}
 
 {#{% block content %}#}
@@ -37,17 +37,27 @@
                                                             <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;">سن :
                                                                 {{ madadju.age }}
                                                             </h4>
-                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href="/madadkar-profile/{{ madadju.current_madadkar.user.user.username }}">مددکار فعلی :
-                                                                {{ madadju.current_madadkar.user.user.last_name }}
+
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href={% url 'taaligh' madadju.user.user.username %}>تعلیق مددجو </a>
+                                                            </h4>
+
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href={% url 'success' madadju.user.user.username %}>به روزرسانی دستآوردها و موفقیت ها</a>
+                                                            </h4>
+
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href={% url 'report' madadju.user.user.username %}>ثبت گزارش
                                                             </a></h4>
 
-                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href="/madadju-pay/{{ madadju.user.user.username }}">صفجه پرداخت به مددجو
+
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href={% url 'instantneed' madadju.user.user.username %}>افزودن نیاز
                                                             </a></h4>
 
-                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href="/madadju-ehda/{{ madadju.user.user.username }}">اهدای هدایای غیرنقدی
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href={% url 'managesaving' madadju.user.user.username %}>مدیریت حساب
                                                             </a></h4>
 
-                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href="/madadju-enseraf/{{ madadju.user.user.username }}">انصراف از همیاری
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href={% url 'receipt' madadju.user.user.username %}>ثبت رسید
+                                                            </a></h4>
+
+                                                            <h4 style="font-family: 'B Nazanin'; font-size: 16px; font-weight: bold;"><a href={% url 'showneed' madadju.user.user.username %}>مشاهده و ویرایش نیازها
                                                             </a></h4>
 
 

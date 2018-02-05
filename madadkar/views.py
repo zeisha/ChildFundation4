@@ -5,7 +5,7 @@ from django.contrib.auth import logout as auth_logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from madadju.forms import ReportForm
-from madadju.models import Madadju
+from madadju.models import Madadju, Success, UrgentNeed, Need
 from karbar.models import MyUser
 from django.contrib.auth.models import User
 import datetime
@@ -17,6 +17,7 @@ from MySite.forms import MessageForm
 from hamyar.models import Hamyar
 from karbar.models import Message
 from madadju.models import Report as Mreport
+from django.contrib.auth.decorators import login_required
 
 def madadkarhome(request):
     return render(request, "madadkar/home.html")
@@ -72,8 +73,23 @@ def editneed(request):
     return render(request, "madadkar/editneed.html")
 
 
-def instantneed(request):
-    return render(request, "madadkar/instantneed.html")
+@login_required()
+def instantneed(request, username):
+    user=User.objects.get(username=username)
+    user=MyUser.objects.get(user=user)
+    madadju=Madadju.objects.get(user=user)
+    date=datetime.datetime.now()
+    if request.method == 'POST':
+        message = "نیاز ثبت شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        text = request.POST.get('text')
+        Need.objects.create(madadju=madadju, name=text)
+        return render(request, 'madadkar/home.html', context)
+
+    if request.method == 'GET':
+        return render(request, 'madadkar/instantneed.html', {'madadju': madadju})
 
 
 def madadjuregister(request):
@@ -96,12 +112,41 @@ def seereq(request):
     return render(request, "madadkar/seerequests.html")
 
 
-def success(request):
-    return render(request, "madadkar/success.html")
+@login_required()
+def success(request, username):
+    user=User.objects.get(username=username)
+    user=MyUser.objects.get(user=user)
+    madadju=Madadju.objects.get(user=user)
+    if request.method == 'POST':
+        message = "موفقیت ثبت شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        text = request.POST.get('text')
+        title = request.POST.get('title')
+        Success.objects.create(madadju=madadju, title=title, content=text)
+        return render(request, 'madadkar/home.html', context)
+
+    if request.method == 'GET':
+        return render(request, 'madadkar/success.html', {'madadju': madadju})
 
 
-def taaligh(request):
-    return render(request, "madadkar/taaligh.html")
+@login_required()
+def taaligh(request, username):
+    user=User.objects.get(username=username)
+    user=MyUser.objects.get(user=user)
+    madadju=Madadju.objects.get(user=user)
+    if request.method == 'POST':
+        message = "مددجو تعلیق شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+        percent = request.POST.get('percent')
+        madadju.percent=percent
+        return render(request, 'madadkar/home.html', context)
+
+    if request.method == 'GET':
+        return render(request, 'madadkar/taaligh.html', {'madadju': madadju})
 
 def logout(request):
     auth_logout(request)
@@ -209,37 +254,25 @@ def madadkarviewh(request, username):
 
 
 
-class Report(TemplateView):
-    template_name = 'madadkar/getmadadju.html'
-
-    def get(self, request, **kwargs):
-        form = ReportForm()
-        return render(request, self.template_name, {'form': form})
-
-    def post(self, request):
-        form = ReportForm(request.POST)
-        text = None
-        id = request.POST.get('text')
-        user=User.objects.get(username=id)
-        user=MyUser.objects.get(user=user)
-        madadju=Madadju.objects.get(user=user)
-        date = datetime.datetime.now()
-        HttpResponseRedirect(request,'madadkar/report.html')
-        if(madadju!=None):
-            title=request.POST.get('title')
-            content=request.POST.get('content')
-            report=Mreport.objects.create(madadju=madadju, content=content, title=title, date=date)
-        if report.is_valid():
-            # post = form.save(commit=False)
-            # post.user = request.user
-            # post.save()
-            report.save()
-        context={}
-        message = "گزارش شما با موفقیت ثبت شد"
+@login_required()
+def report(request, username):
+    user=User.objects.get(username=username)
+    user=MyUser.objects.get(user=user)
+    madadju=Madadju.objects.get(user=user)
+    date=datetime.datetime.now()
+    if request.method == 'POST':
+        message = "گزارش ثبت شد"
+        context = {}
         context['message'] = message
         context['type'] = 'green'
-        args = {'form': form, 'text': text}
-        return render(request, 'madadju/madadju.html', context)
+        text = request.POST.get('text')
+        title = request.POST.get('title')
+        Mreport.objects.create(madadju=madadju, title=title, content=text, date=date)
+        return render(request, 'madadkar/home.html', context)
+
+    if request.method == 'GET':
+        return render(request, 'madadkar/report.html', {'madadju': madadju})
+
 
 
 
@@ -250,3 +283,26 @@ def MadadjooListView(request):
     list = Madadju.objects.filter(current_madadkar=myMadadkar)
 
     return render(request, 'madadkar/Madadjoo_List.html', {'list': list})
+
+
+
+def needShow(request, username):
+    user = User.objects.get(username=username)
+    myUser = MyUser.objects.get(user=user)
+    myMadadju = Madadju.objects.get(user=myUser)
+    if request.method=='GET':
+        list = Need.objects.filter(madadju=myMadadju)
+        return render(request, 'madadkar/showneed.html', {'list': list})
+    else:
+        needs = Need.objects.filter(madadju=myMadadju)
+        for need in needs:
+            need_name = request.POST.get('need_' + str(need.id))
+            if need_name != '':
+                need.name = need_name
+                need.save()
+            else:
+                need.delete()
+        context={}
+        message="تغییرات با موفقیت ثبت شد"
+        context['message']=message
+        return render(request, "madadkar/home.html",context)

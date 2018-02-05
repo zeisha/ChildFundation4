@@ -33,6 +33,8 @@ class UrgentNeed(models.Model):
     need = models.CharField(max_length=500)
 
 
+
+
 # class Letter(models.Model):
 #     madadju = models.ForeignKey(Madadju, on_delete=models.CASCADE)
 #     title = models.CharField(max_length=50)
@@ -54,3 +56,8 @@ class Report(models.Model):
     title = models.CharField(max_length=50)
     content = models.CharField(max_length=1000)
     date = models.DateField()
+
+class Success(models.Model):
+    madadju = models.ForeignKey(Madadju, on_delete=models.CASCADE)
+    title = models.CharField(max_length=50)
+    content = models.CharField(max_length=1000)

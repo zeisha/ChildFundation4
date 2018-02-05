@@ -19,3 +19,8 @@ class AdminPayment(models.Model):
         ('دفعه ای', '2'),
     )
     kind = models.CharField(max_length=10, choices=KIND_CHOICES, default='ماهیانه')
+
+
+class Adapt2(models.Model):
+    madadju=models.ForeignKey(Madadju, on_delete=models.CASCADE)
+    admin=models.ForeignKey(Admin, on_delete=models.CASCADE)

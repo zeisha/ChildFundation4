@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from madadju.models import Madadju
 from karbar.models import Message, MyUser
-from modir.models import Admin
+from modir.models import Admin, Adapt2
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
@@ -164,9 +164,10 @@ def madadjuviewh(request, username):
         for hamyar in hamyarlist:
             if (Hamyar.objects.filter(user=u).exists()):
                 kafil = Hamyar.objects.get(user=u)
+                adapt=Adapt.objects.create(madadju=madadju, hamyar=kafil)
         if (kafil==None):
             kafil=Admin.objects.get(user=u)
-        adapt= Adapt.objects.create(madadju=madadju, hamyar=kafil)
+            adapt= Adapt2.objects.create(madadju=madadju, admin=kafil)
         adapt.save()
         context['adapt']=adapt
         return render(request, 'hamyar/Hamyar_Home.html', context)
