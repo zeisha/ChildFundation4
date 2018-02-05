@@ -169,21 +169,28 @@ def madadjuviewh(request, username):
         for hamyar in hamyarlist:
             if (Hamyar.objects.filter(user=u).exists()):
                 kafil = Hamyar.objects.get(user=u)
-                adapt = Adapt.objects.create(madadju=madadju, hamyar=kafil)
-                if adapt not in Adapt.objects.all():
+                flag = False
+                for kefalat in Adapt.objects.all():
+                    if kefalat.madadju == madadju:
+                        if kefalat.hamyar == kafil:
+                            flag = True
+                if not flag:
+                    adapt = Adapt.objects.create(madadju=madadju, hamyar=kafil)
                     adapt.save()
-                else:
-                    adapt.delete()
-                context['adapt'] = adapt
+
+                #context['adapt'] = adapt
                 return render(request, 'hamyar/Hamyar_Home.html', context)
         if (kafil == None):
             kafil = Admin.objects.get(user=u)
-            adapt = Adapt2.objects.create(madadju=madadju, admin=kafil)
-            if adapt not in Adapt2.objects.all():
+            flag = False
+            for kefalat in Adapt2.objects.all():
+                if kefalat.madadju == madadju:
+                        flag = True
+            if not flag:
+                adapt = Adapt2.objects.create(madadju=madadju, admin=kafil)
                 adapt.save()
-            else:
-                adapt.delete()
-            context['adapt'] = adapt
+                print('heeey')
+            #context['adapt'] = adapt
             return render(request, 'modir/Admin_Home.html', context)
 
 
