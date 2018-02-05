@@ -41,9 +41,6 @@ class HamyarChartView(TemplateView):
     template_name = 'hamyar/Hamyar_Chart.html'
 
 
-class EnserafView(TemplateView):
-    template_name = 'hamyar/Enseraf.html'
-
 
 @login_required()
 def EhdaView(request, username):
@@ -79,8 +76,16 @@ class EhdaReceiptView(TemplateView):
     template_name = 'hamyar/Ehda_Receipt.html'
 
 
-class LettersBoxView(TemplateView):
-    template_name = 'hamyar/Letters_Box.html'
+@login_required()
+def LettersBoxView(request):
+    myUser = MyUser.objects.get(user=request.user)
+    hamyar = Hamyar.objects.get(user=myUser)
+
+    all_messages = Message.objects.filter(receiver=myUser)
+
+    return render(request, 'hamyar/Letters_Box.html', {'all_messages': all_messages})
+
+
 
 
 class MadadjooContactView(TemplateView):
@@ -144,11 +149,11 @@ def PayView(request, username):
         if form.is_valid():
 
             admin.saving += (int(value)*10)/100
-            madadju.using += int((int(value) * madadju.percent) / 100)
-            madadju.saving += int(value) - madadju.using - admin.saving
-            print(madadju.saving)
-            madadju.save()
             admin.save()
+            madadju.using += int(( (int(value) - admin.saving) * madadju.percent) / 100)
+            madadju.save()
+            madadju.saving += int(value) - madadju.using - admin.saving
+            madadju.save()
 
             receipt = Payment.objects.create(date=now, value=value, receipt_number=receipt_number,
                                              madadju=madadju, hamyar=hamyar, kind=kind)
@@ -162,8 +167,26 @@ def PayView(request, username):
         return render(request, 'hamyar/Pay.html', {'madadju': madadju})
 
 
-class PayReceiptView(TemplateView):
-    template_name = 'hamyar/Pay_Receipt.html'
+@login_required()
+def PayReceiptListView(request):
+    myUser = MyUser.objects.get(user=request.user)
+    hamyar = Hamyar.objects.get(user=myUser)
+
+    madadju_receipt_list = Payment.objects.filter(hamyar = hamyar)
+    foundation_receipt_list = PaymentFoundation.objects.filter(hamyar = hamyar)
+
+    return render(request, 'hamyar/Pay_Receipt_List.html', {'madadju_receipt_list': madadju_receipt_list,
+                                                            'foundation_receipt_list': foundation_receipt_list})
+@login_required()
+def EhdaReceiptListView(request):
+    myUser = MyUser.objects.get(user=request.user)
+    hamyar = Hamyar.objects.get(user=myUser)
+
+    madadju_receipt_list = Gift.objects.filter(hamyar = hamyar)
+    return render(request, 'hamyar/Ehda_Receipt_List.html', {'madadju_receipt_list': madadju_receipt_list})
+
+
+
 
 
 @login_required()
@@ -236,20 +259,20 @@ def edit_profile(request):
         if request.method == 'POST':
             user_form = SignupForm1(request.POST, instance=request.user)
             # myUser = MyUser.objects.get(user=request.user)
-            if user_form.is_valid():
-                print("valid")
-                user_form.save()
-                myUser.user = request.user
-                myUser.phone_number = request.POST.get('phone_number')
-                myUser.national_id = request.POST.get('national_id')
-                myUser.country = request.POST.get('country')
-                myUser.city = request.POST.get('city')
-                myUser.address = request.POST.get('address')
-                myUser.postal_code = request.POST.get('postal_code')
-                hamyar.report_method = request.POST.get('report_method')
-                myUser.save()
-                hamyar.save()
-                return render(request, 'hamyar/Hamyar_Home.html')
+            #if user_form.is_valid():
+            print("valid")
+            user_form.save()
+            myUser.user = request.user
+            myUser.phone_number = request.POST.get('phone_number')
+            myUser.national_id = request.POST.get('national_id')
+            myUser.country = request.POST.get('country')
+            myUser.city = request.POST.get('city')
+            myUser.address = request.POST.get('address')
+            myUser.postal_code = request.POST.get('postal_code')
+            hamyar.report_method = request.POST.get('report_method')
+            myUser.save()
+            hamyar.save()
+            return render(request, 'hamyar/Hamyar_Home.html')
     return render(request, 'hamyar/Edit_Profile.html', {'user': user, 'myUser': myUser, 'hamyar': hamyar})
 
 
@@ -283,21 +306,21 @@ def ProfileView(request, username):
 
 @login_required()
 def EnserafView(request, username):
-    print("-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww")
-    myUserList = MyUser.objects.all()
-    for myUser in myUserList:
-        if myUser.user.username == username:
-            break
-    madadju = Madadju.objects.get(user=myUser)
-
-    myUser = MyUser.objects.get(user=request.user)
-    hamyar = Hamyar.objects.get(user=myUser)
-
-    adaptlist = Adapt.objects.all()
-    for adapt in adaptlist:
-        if adapt.madadju == madadju and adapt.hamyar == hamyar:
-            adapt.delete(adapt)
-            break
+    # print("-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww")
+    # myUserList = MyUser.objects.all()
+    # for myUser in myUserList:
+    #     if myUser.user.username == username:
+    #         break
+    # madadju = Madadju.objects.get(user=myUser)
+    #
+    # myUser = MyUser.objects.get(user=request.user)
+    # hamyar = Hamyar.objects.get(user=myUser)
+    #
+    # adaptlist = Adapt.objects.all()
+    # for adapt in adaptlist:
+    #     if adapt.madadju == madadju and adapt.hamyar == hamyar:
+    #         adapt.delete(adapt)
+    #         break
 
     return render(request, 'hamyar/Madadjoo_List.html')
 
@@ -331,3 +354,14 @@ def PayFoundationView(request):
     if request.method == 'GET':
         form = PaymentForm()
         return render(request, 'hamyar/Pay_Foundation.html')
+
+@login_required
+def message_detail(request, pk):
+    myUser = MyUser.objects.get(user=request.user)
+    hamyar = Hamyar.objects.get(user=myUser)
+
+    message = Message.objects.get(pk=pk)
+    message.delete()
+
+    all_messages = Message.objects.filter(receiver=myUser)
+    return render(request, 'hamyar/Letters_Box.html', {'all_messages': all_messages})

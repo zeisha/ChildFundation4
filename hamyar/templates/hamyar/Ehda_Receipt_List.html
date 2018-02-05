@@ -1,0 +1,42 @@
+p{% extends 'hamyar/Base.html' %}
+
+{% block title %}
+    پروفایل همیار
+{% endblock %}
+
+{% block content %}
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pull-right" style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right; width: 87%;">
+                        <h3 style="font-family: 'B Nazanin';">پروفایل همیار</h3>
+                        <br>
+
+                        <table class="table table-striped" style="align-content: right; direction: ltr; text-align: right; font-family: 'B Nazanin'; font-size: 20px; ">
+                            <thead>
+                                <tr>
+                                    <th class="text-right">تاریخ</th>
+                                    <th class="text-right">گیرنده</th>
+                                    <th class="text-right">هدایا</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            {% if madadju_receipt_list %}
+                                {% for receipt in madadju_receipt_list %}
+                                <tr>
+                                    <td>{{ receipt.date }}</td>
+                                    <td>{{ receipt.madadju.user.user.last_name }}</td>
+                                    <td>{{ receipt.content }}</td>
+                                </tr>
+                                {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
