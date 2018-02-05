@@ -23,5 +23,9 @@ urlpatterns = [
     path('taaligh/<username>', madadkar.views.taaligh, name='taaligh'),
     path('logout/', logout, name='madadkar-logout'),
     path('showneed/<username>', needShow, name='showneed'),
+    path('message-detail/<int:pk>', message_detail, name='madadkar-message-detail'),
+    path('letters-box/', LettersBoxView, name='madadkar-letters-box'),
+    path('search/', SearchView, name='madadkar-search'),
+    path('search_result/', SerchResultView, name='madadkar-search-result'),
 
 ]

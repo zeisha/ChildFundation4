@@ -17,6 +17,7 @@ from hamyar.models import Hamyar
 from karbar.models import Message
 from madadju.models import Report as Mreport
 from django.contrib.auth.decorators import login_required
+from modir.models import Admin
 
 
 def madadkarhome(request):
@@ -230,24 +231,42 @@ def madadkarviewh(request, username):
     user = User.objects.get(username=username)
     user = MyUser.objects.get(user=user)
     madadkar = Madadkar.objects.get(user=user)
+    muser=MyUser.objects.get(user=request.user)
+    if Hamyar.objects.filter(user=muser).exists():
+        if request.method == 'GET':
+            form = MessageForm()
+            return render(request, 'madadkar/madadkar.html', {'madadkar': madadkar, 'form': form})
 
-    if request.method == 'GET':
-        form = MessageForm()
-        return render(request, 'madadkar/madadkar.html', {'madadkar': madadkar, 'form': form})
+        if request.method == 'POST':
+            message = "پیام با موفقیت ارسال شد"
+            context = {}
+            context['message'] = message
+            context['type'] = 'green'
+            user = request.user
+            u = MyUser.objects.get(user=user)
+            hamyar = Hamyar.objects.get(user=u)
+            text = request.POST.get('text')
+            hamyar = hamyar.user
+            madadkar = madadkar.user
+            message = Message.objects.create(sender=hamyar, receiver=madadkar, text=text)
+            return render(request, 'hamyar/Hamyar_Home.html', context)
+    else:
+        admin=Admin.objects.get(user=muser)
+        if request.method == 'GET':
+            form = MessageForm()
+            return render(request, 'madadkar/madadkar1.html', {'madadkar': madadkar, 'form': form})
 
-    if request.method == 'POST':
-        message = "پیام با موفقیت ارسال شد"
-        context = {}
-        context['message'] = message
-        context['type'] = 'green'
-        user = request.user
-        u = MyUser.objects.get(user=user)
-        hamyar = Hamyar.objects.get(user=u)
-        text = request.POST.get('text')
-        hamyar = hamyar.user
-        madadkar = madadkar.user
-        message = Message.objects.create(sender=hamyar, receiver=madadkar, text=text)
-        return render(request, 'hamyar/Hamyar_Home.html', context)
+        if request.method == 'POST':
+            message = "پیام با موفقیت ارسال شد"
+            context = {}
+            context['message'] = message
+            context['type'] = 'green'
+            user = request.user
+            u = MyUser.objects.get(user=user)
+            text = request.POST.get('text')
+            madadkar = madadkar.user
+            message = Message.objects.create(sender=muser, receiver=madadkar, text=text)
+            return render(request, 'modir/Admin_Home.html', context)
 
 
 @login_required()
@@ -341,3 +360,55 @@ def managesaving2(request, username):
         message = "تغییرات با موفقیت ثبت شد"
         context['message'] = message
         return render(request, "madadkar/home.html", context)
+
+
+@login_required()
+def LettersBoxView(request):
+    myUser = MyUser.objects.get(user=request.user)
+    madadkar = Madadkar.objects.get(user=myUser)
+
+    all_messages = Message.objects.filter(receiver=myUser)
+
+    return render(request, 'madadkar/seemsg.html', {'all_messages': all_messages})
+
+
+
+@login_required
+def message_detail(request, pk):
+    myUser = MyUser.objects.get(user=request.user)
+    madadkar = Madadkar.objects.get(user=myUser)
+
+    message = Message.objects.get(pk=pk)
+    message.delete()
+
+    all_messages = Message.objects.filter(receiver=myUser)
+    return render(request, 'madadkar/seemsg.html', {'all_messages': all_messages})
+
+
+
+@login_required()
+def SearchView(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            mgender = request.POST.get('gender')
+            mfromage = request.POST.get('fromage')
+            mtoage = request.POST.get('toage')
+            mphysical_state = request.POST.get('physical_state')
+            mcity = request.POST.get('city')
+
+            Allmadadju = Madadju.objects.all()
+            madadjuList = []
+            for madadju in Allmadadju:
+                if (madadju.gender == mgender and madadju.age >= int(mfromage) and
+                            madadju.age <= int(
+                            mtoage) and madadju.physical_state == mphysical_state and madadju.user.city == mcity):
+                    madadjuList.append(madadju)
+
+            return render(request, 'madadkar/Search_Result.html', {'list': madadjuList})
+        else:
+            return render(request, 'madadkar/Search.html')
+
+
+@login_required()
+def SerchResultView(request):
+    return render(request, 'madadkar/Search_Result.html')

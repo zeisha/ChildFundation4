@@ -150,7 +150,10 @@ def madadjuviewh(request, username):
 
     if request.method == 'GET':
         form = MessageForm()
-        return render(request, 'madadju/madadju-choose.html', {'madadju': madadju, 'form': form})
+        if(Hamyar.objects.filter(user=MyUser.objects.get(user=request.user)).exists()):
+            return render(request, 'madadju/madadju-choose.html', {'madadju': madadju, 'form': form})
+        else:
+            return render(request, 'madadju/madadju-choose1.html', {'madadju': madadju, 'form': form})
 
     if request.method == 'POST':
         message = "مددجو به سرپرستی گرفته شد"
@@ -165,12 +168,16 @@ def madadjuviewh(request, username):
             if (Hamyar.objects.filter(user=u).exists()):
                 kafil = Hamyar.objects.get(user=u)
                 adapt=Adapt.objects.create(madadju=madadju, hamyar=kafil)
+                adapt.save()
+                context['adapt'] = adapt
+                return render(request, 'hamyar/Hamyar_Home.html', context)
         if (kafil==None):
             kafil=Admin.objects.get(user=u)
             adapt= Adapt2.objects.create(madadju=madadju, admin=kafil)
-        adapt.save()
-        context['adapt']=adapt
-        return render(request, 'hamyar/Hamyar_Home.html', context)
+            adapt.save()
+            context['adapt'] = adapt
+            return render(request, 'modir/Admin_Home.html', context)
+
 
 
 
