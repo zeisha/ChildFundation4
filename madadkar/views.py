@@ -16,6 +16,7 @@ from django.views import View
 from MySite.forms import MessageForm
 from hamyar.models import Hamyar
 from karbar.models import Message
+from madadju.models import Report as Mreport
 
 def madadkarhome(request):
     return render(request, "madadkar/home.html")
@@ -86,38 +87,6 @@ def managesaving(request):
 def receipt(request):
     return render(request, "madadkar/receipt.html")
 
-class Report(TemplateView):
-    template_name = 'madadkar/report.html'
-
-    def get(self, request, **kwargs):
-        form = ReportForm()
-        return render(request, self.template_name, {'form': form})
-
-    def post(self, request):
-        form = ReportForm(request.POST)
-        text = None
-        id = request.POST.get('text')
-        user=User.objects.get(username=id)
-        user=MyUser.objects.get(user=user)
-        madadju=Madadju.objects.get(user=user)
-        date = datetime.datetime.now()
-        if(madadju!=None):
-            title=request.POST.get('title')
-            content=request.POST.get('content')
-            report=Report.objects.create(madadju=madadju, content=content, title=title, date=date)
-        if form.is_valid():
-            # post = form.save(commit=False)
-            # post.user = request.user
-            # post.save()
-            form.save()
-            text = form.cleaned_data
-            form = ContactForm()
-        context={}
-        message = "گزارش شما با موفقیت ثبت شد"
-        context['message'] = message
-        context['type'] = 'green'
-        args = {'form': form, 'text': text}
-        return render(request, 'madadju/madadju.html', context)
 
 def seemsg(request):
     return render(request, "madadkar/seemsg.html")
@@ -238,3 +207,36 @@ def madadkarviewh(request, username):
         message=Message.objects.create(sender=hamyar, receiver=madadkar, text=text)
         return render(request, 'hamyar/Hamyar_Home.html', context)
 
+
+
+class Report(TemplateView):
+    template_name = 'madadkar/getmadadju.html'
+
+    def get(self, request, **kwargs):
+        form = ReportForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = ReportForm(request.POST)
+        text = None
+        id = request.POST.get('text')
+        user=User.objects.get(username=id)
+        user=MyUser.objects.get(user=user)
+        madadju=Madadju.objects.get(user=user)
+        date = datetime.datetime.now()
+        HttpResponseRedirect(request,'madadkar/report.html')
+        if(madadju!=None):
+            title=request.POST.get('title')
+            content=request.POST.get('content')
+            report=Mreport.objects.create(madadju=madadju, content=content, title=title, date=date)
+        if report.is_valid():
+            # post = form.save(commit=False)
+            # post.user = request.user
+            # post.save()
+            report.save()
+        context={}
+        message = "گزارش شما با موفقیت ثبت شد"
+        context['message'] = message
+        context['type'] = 'green'
+        args = {'form': form, 'text': text}
+        return render(request, 'madadju/madadju.html', context)

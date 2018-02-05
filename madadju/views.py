@@ -9,8 +9,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from karbar.forms import SignupForm2
 from MySite.forms import ContactForm, MessageForm
-from hamyar.forms import PaymentForm
-import datetime, random
 from hamyar.models import Hamyar, Payment
 from django.contrib.auth.models import User
 from hamyar.models import Adapt
@@ -161,8 +159,14 @@ def madadjuviewh(request, username):
         context['type'] = 'green'
         user = request.user
         u = MyUser.objects.get(user=user)
-        hamyar= Hamyar.objects.get(user=u)
-        adapt= Adapt.objects.create(madadju=madadju, hamyar=hamyar)
+        kafil=None
+        hamyarlist=Hamyar.objects.all()
+        for hamyar in hamyarlist:
+            if (Hamyar.objects.filter(user=u).exists()):
+                kafil = Hamyar.objects.get(user=u)
+        if (kafil==None):
+            kafil=Admin.objects.get(user=u)
+        adapt= Adapt.objects.create(madadju=madadju, hamyar=kafil)
         adapt.save()
         context['adapt']=adapt
         return render(request, 'hamyar/Hamyar_Home.html', context)

@@ -72,28 +72,13 @@
                                     <div class="modal-body text-right">
                                         <form role="form" method="post">
                                             {% csrf_token %}
-                                            <div class="form-group">
-                                        <div class="col-md-12 inputGroupContainer">
-                                            <div class="input-group">
-                                                    <span class="input-group-addon"><i
-                                                            class="glyphicon glyphicon-road"></i></span>
-                                                <input name="title" placeholder="عنوان"
-                                                       class="form-control" type="title">
-                                            </div>
+                                            {% for field in form %}
+                                                {{ field }}
+                                                <label class="label label-default"
+                                                       style="direction: rtl; font-family: 'B Mitra'; font-weight:bold; font-size: 13px; padding: 5px;">{{ field.label_tag }}</label>
 
-                                            <div class="input-group">
-                                                    <span class="input-group-addon"><i
-                                                            class="glyphicon glyphicon-road"></i></span>
-                                                <input name="content" placeholder="متن"
-                                                       class="form-control" type="content">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% if gender_error and type == 'signup' %}
-                                        <span class="text-danger" style="text-align:center;">
-                                            {{ gender_error}}
-                                        </span>
-                                    {% endif %}
+                                                <br>
+                                            {% endfor %}
                                             <br>
                                             <!-- button -->
                                             <div class="modal-footer">
