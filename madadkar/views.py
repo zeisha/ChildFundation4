@@ -4,8 +4,7 @@ from MySite.forms import ContactForm
 from django.contrib.auth import logout as auth_logout
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from madadju.forms import ReportForm
-from madadju.models import Madadju, Success, UrgentNeed, Need
+from madadju.models import Madadju, Success, Need
 from karbar.models import MyUser
 from django.contrib.auth.models import User
 import datetime
@@ -18,6 +17,7 @@ from hamyar.models import Hamyar
 from karbar.models import Message
 from madadju.models import Report as Mreport
 from django.contrib.auth.decorators import login_required
+
 
 def madadkarhome(request):
     return render(request, "madadkar/home.html")
@@ -75,10 +75,10 @@ def editneed(request):
 
 @login_required()
 def instantneed(request, username):
-    user=User.objects.get(username=username)
-    user=MyUser.objects.get(user=user)
-    madadju=Madadju.objects.get(user=user)
-    date=datetime.datetime.now()
+    user = User.objects.get(username=username)
+    user = MyUser.objects.get(user=user)
+    madadju = Madadju.objects.get(user=user)
+    date = datetime.datetime.now()
     if request.method == 'POST':
         message = "نیاز ثبت شد"
         context = {}
@@ -96,10 +96,6 @@ def madadjuregister(request):
     return render(request, "madadkar/madadju-register.html")
 
 
-def managesaving(request):
-    return render(request, "madadkar/managesaving.html")
-
-
 def receipt(request):
     return render(request, "madadkar/receipt.html")
 
@@ -114,9 +110,9 @@ def seereq(request):
 
 @login_required()
 def success(request, username):
-    user=User.objects.get(username=username)
-    user=MyUser.objects.get(user=user)
-    madadju=Madadju.objects.get(user=user)
+    user = User.objects.get(username=username)
+    user = MyUser.objects.get(user=user)
+    madadju = Madadju.objects.get(user=user)
     if request.method == 'POST':
         message = "موفقیت ثبت شد"
         context = {}
@@ -133,20 +129,22 @@ def success(request, username):
 
 @login_required()
 def taaligh(request, username):
-    user=User.objects.get(username=username)
-    user=MyUser.objects.get(user=user)
-    madadju=Madadju.objects.get(user=user)
+    user = User.objects.get(username=username)
+    user = MyUser.objects.get(user=user)
+    madadju = Madadju.objects.get(user=user)
     if request.method == 'POST':
         message = "مددجو تعلیق شد"
         context = {}
         context['message'] = message
         context['type'] = 'green'
         percent = request.POST.get('percent')
-        madadju.percent=percent
+        madadju.percent = percent
+        madadju.save()
         return render(request, 'madadkar/home.html', context)
 
     if request.method == 'GET':
         return render(request, 'madadkar/taaligh.html', {'madadju': madadju})
+
 
 def logout(request):
     auth_logout(request)
@@ -175,11 +173,10 @@ def madadkarprofile(request):
                 madadkar.employment_date = request.POST.get('employment_date')
                 myUser.save()
                 madadkar.save()
-                return render(request, 'madadkar/home.html', {'message':"تغییرات با موفقیت ثبت شد"})
+                return render(request, 'madadkar/home.html', {'message': "تغییرات با موفقیت ثبت شد"})
             else:
                 print(user_form.errors)
-    return render(request, 'madadkar/profile.html', {'user': user, 'myUser': myUser, 'madadkar':madadkar})
-
+    return render(request, 'madadkar/profile.html', {'user': user, 'myUser': myUser, 'madadkar': madadkar})
 
 
 class MadadkarMadadjuregister(View):
@@ -203,8 +200,9 @@ class MadadkarMadadjuregister(View):
         grade = request.POST.get('grade')
         gender = request.POST.get('gender')
         context = {'phone_number': phone_number, 'country': country, 'city': city,
-                   'postal_code': postal_code, 'address': address, national_id: 'national_id', 'physical_state':physical_state, 'age':age,
-                    'grade':grade, 'gender':gender}
+                   'postal_code': postal_code, 'address': address, national_id: 'national_id',
+                   'physical_state': physical_state, 'age': age,
+                   'grade': grade, 'gender': gender}
         if form.is_valid():
             if len(phone_number) == 11 and phone_number[0:2] == '09':
                 form.save()
@@ -215,7 +213,8 @@ class MadadkarMadadjuregister(View):
                 member = MyUser.objects.create(user=user, phone_number=phone_number, country=country, city=city,
                                                postal_code=postal_code, address=address, national_id=national_id)
                 member.save()
-                madadju = Madadju.objects.create(user=member, gender=gender, grade=grade, age=age, physical_state=physical_state, account=0, saving=0)
+                madadju = Madadju.objects.create(user=member, gender=gender, grade=grade, age=age,
+                                                 physical_state=physical_state, account=0, saving=0)
                 madadju.save()
                 context['message'] = "مددجو با موفقیت ساخته شد"
                 return HttpResponseRedirect(reverse('madadju-home'))
@@ -227,11 +226,9 @@ class MadadkarMadadjuregister(View):
         return render(request, 'madadkar/madadju-register.html', context)
 
 
-
-
 def madadkarviewh(request, username):
     user = User.objects.get(username=username)
-    user=MyUser.objects.get(user=user)
+    user = MyUser.objects.get(user=user)
     madadkar = Madadkar.objects.get(user=user)
 
     if request.method == 'GET':
@@ -245,21 +242,20 @@ def madadkarviewh(request, username):
         context['type'] = 'green'
         user = request.user
         u = MyUser.objects.get(user=user)
-        hamyar= Hamyar.objects.get(user=u)
-        text=request.POST.get('text')
-        hamyar=hamyar.user
-        madadkar=madadkar.user
-        message=Message.objects.create(sender=hamyar, receiver=madadkar, text=text)
+        hamyar = Hamyar.objects.get(user=u)
+        text = request.POST.get('text')
+        hamyar = hamyar.user
+        madadkar = madadkar.user
+        message = Message.objects.create(sender=hamyar, receiver=madadkar, text=text)
         return render(request, 'hamyar/Hamyar_Home.html', context)
-
 
 
 @login_required()
 def report(request, username):
-    user=User.objects.get(username=username)
-    user=MyUser.objects.get(user=user)
-    madadju=Madadju.objects.get(user=user)
-    date=datetime.datetime.now()
+    user = User.objects.get(username=username)
+    user = MyUser.objects.get(user=user)
+    madadju = Madadju.objects.get(user=user)
+    date = datetime.datetime.now()
     if request.method == 'POST':
         message = "گزارش ثبت شد"
         context = {}
@@ -274,8 +270,6 @@ def report(request, username):
         return render(request, 'madadkar/report.html', {'madadju': madadju})
 
 
-
-
 def MadadjooListView(request):
     myUser = MyUser.objects.get(user=request.user)
     myMadadkar = Madadkar.objects.get(user=myUser)
@@ -285,12 +279,11 @@ def MadadjooListView(request):
     return render(request, 'madadkar/Madadjoo_List.html', {'list': list})
 
 
-
 def needShow(request, username):
     user = User.objects.get(username=username)
     myUser = MyUser.objects.get(user=user)
     myMadadju = Madadju.objects.get(user=myUser)
-    if request.method=='GET':
+    if request.method == 'GET':
         list = Need.objects.filter(madadju=myMadadju)
         return render(request, 'madadkar/showneed.html', {'list': list})
     else:
@@ -302,7 +295,49 @@ def needShow(request, username):
                 need.save()
             else:
                 need.delete()
-        context={}
-        message="تغییرات با موفقیت ثبت شد"
-        context['message']=message
-        return render(request, "madadkar/home.html",context)
+        context = {}
+        message = "تغییرات با موفقیت ثبت شد"
+        context['message'] = message
+        return render(request, "madadkar/home.html", context)
+
+
+def managesaving1(request, username):
+    user = User.objects.get(username=username)
+    myUser = MyUser.objects.get(user=user)
+    myMadadju = Madadju.objects.get(user=myUser)
+    if request.method == 'GET':
+        return render(request, 'madadkar/managesaving1.html', {'madadju': myMadadju})
+    else:
+        account = request.POST.get('account')
+        value = request.POST.get('value')
+        value = int(value)
+        if account == 'ac':
+            myMadadju.account = myMadadju.account + value
+        else:
+            myMadadju.saving = myMadadju.saving + value
+        myMadadju.save()
+        context = {}
+        message = "تغییرات با موفقیت ثبت شد"
+        context['message'] = message
+        return render(request, "madadkar/home.html", context)
+
+
+def managesaving2(request, username):
+    user = User.objects.get(username=username)
+    myUser = MyUser.objects.get(user=user)
+    myMadadju = Madadju.objects.get(user=myUser)
+    if request.method == 'GET':
+        return render(request, 'madadkar/managesaving2.html', {'madadju': myMadadju})
+    else:
+        account = request.POST.get('account')
+        value = request.POST.get('value')
+        value = int(value)
+        if account == 'ac':
+            myMadadju.account = myMadadju.account - value
+        else:
+            myMadadju.saving = myMadadju.saving - value
+        myMadadju.save()
+        context = {}
+        message = "تغییرات با موفقیت ثبت شد"
+        context['message'] = message
+        return render(request, "madadkar/home.html", context)
