@@ -1,0 +1,60 @@
+p{% extends 'hamyar/Base.html' %}
+
+{% block title %}
+    پروفایل همیار
+{% endblock %}
+
+
+{% block content %}
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-right" style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
+                        <h3 style="font-family: 'B Nazanin';">لیست وجوه پرداختی</h3>
+                        <br>
+
+
+                        <table class="table table-striped" style="align-content: right">
+                            <thead>
+                                <tr>
+                                    <th class="text-right">تاریخ</th>
+                                    <th class="text-right">مقصد</th>
+                                    <th class="text-right">کد پیگیری</th>
+                                    <th class="text-right">مبلغ</th>
+                                    <th class="text-right">نوع</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            {% if madadju_receipt_list %}
+                                {% for receipt in madadju_receipt_list %}
+                                <tr>
+                                    <td>{{ receipt.date }}</td>
+                                    <td>{{ receipt.madadju.user.user.last_name }}</td>
+                                    <td>{{ receipt.receipt_number }}</td>
+                                    <td>{{ receipt.value }}</td>
+                                    <td>{{ receipt.kind }}</td>
+                                </tr>
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if foundation_receipt_list %}
+                                {% for receipt in foundation_receipt_list %}
+                                    <tr>
+                                    <td>{{ receipt.date }}</td>
+                                    <td>سازمان</td>
+                                    <td>{{ receipt.receipt_number }}</td>
+                                    <td>{{ receipt.value }}</td>
+                                    <td>-</td>
+                                </tr>
+                                {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

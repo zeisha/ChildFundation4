@@ -23,4 +23,5 @@ urlpatterns = [
     path('madadju-ehda/', include('hamyar.urls4'), name="madadju-ehda"),
     path('search/', SearchView, name='viewer-search'),
     path('search_result/', SerchResultView, name='viewer-search-result'),
+    path('madadju-enseraf', include('hamyar.urls5'), name="madadju-enseraf"),
 ]

@@ -5,4 +5,44 @@
 {% endblock %}
 
 {% block content %}
+    <!--page content-->
+    <div id="page-content-wrapper" class="offset8">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
+                        <section id="report">
+                            <form class="well form-horizontal" style="direction: rtl">
+                                <fieldset>
+                                    <legend>
+                                        <center><h2
+                                                style="font-family: 'B Nazanin'; font-size: 30px; font-weight: bold;">
+                                            <b>پیام‌ها و درخواست‌ها</b></h2></center>
+                                    </legend>
+                                    <br>
+                                    <div style="direction: rtl">
+                                        {% if all_messages %}
+                                            {% for message in all_messages %}
+                                                <div class="col-sm-3 col-lg-4" style="float: right !important;">
+                                                    <div class="thumbnail">
+                                                        <div class="caption">
+                                                            <h4 style="font-weight: bold; color:#7a0134">فرستنده: {{ message.sender }}</h4>
+                                                            {{ message.text }}
+                                                            <br>
+                                                            <br>
+                                                            <a href="{{  }}">بررسی شد.</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
