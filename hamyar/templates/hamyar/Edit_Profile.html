@@ -11,11 +11,15 @@
             <div class="row text-center">
                 <div class="col-md-8" style="float: none; margin: 0 auto;">
                     <div style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px;">
-                        <p style="text-align: right; font-family: 'B Nazanin'; font-size: 30px; font-weight: bold;">
-                            ویرایش اطلاعات</p>
-                        <br>
-                        <form action="" method="post" style="direction: rtl">{% csrf_token %}
-                            <table class="table table-hover"
+                        <form class="well form-horizontal" style="direction: rtl;" action=""
+                              method="post">{% csrf_token %}
+                            <fieldset>
+                                <legend>
+                                    <center><h2><b>ویرایش اطلاعات</b></h2></center>
+                                </legend>
+                                <br>
+
+<table class="table table-hover"
                                    style="alignment: right; text-align: right; font-family: 'B Nazanin'; font-size: 24px; ">
 
                                 <tr>
@@ -102,39 +106,19 @@
 
                                 <tr>
                                     <td><label for="report_method">روش ارنباطی </label></td>
-                                    <td><input type="text" name="report_method" id="report_method" value="{{ hamyar.report_method  }} "></td>
-                                </tr>
-
-
-
-                                <tr>
-                                    <td><label for="password">رمز </label></td>
-                                    <td><input type="password" name="password1" id="password" class=" {% if form.password2.errors %}has-error{% endif %}">
-                                        {% if form.password2.errors %}
-                                            <span class="text-danger">
-                                                <p>{% for error in form.password2.errors %}{{ error }}{% endfor %}</p>
-                                            </span>
-                                        {% endif %}
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td><label for="passworda">تایید رمز </label></td>
-                                    <td><input type="password" name="password2" id="passworda " class=" {% if form.password2.errors %}has-error{% endif %}">
-                                        {% if form.password2.errors %}
-                                            <span class="text-danger">
-                                                <p>{% for error in form.password2.errors %}{{ error }}{% endfor %}</p>
-                                            </span>
-                                        {% endif %}
+                                    <td>
+                                                <input style="margin: 1px 20px; font-size: 12px" type="radio" name="report_method" value="1">&nbsp&nbsp&nbspپیامک<br>
+                                                <input style="margin: 1px 20px; font-size: 12px" type="radio" name="report_method" value="2">&nbsp&nbsp&nbsp ایمیل
                                     </td>
                                 </tr>
 
                             </table>
 
-                        <input type="submit" name="submit"  tabindex="4"
-                           class="form-control btn btn-login" value="ویرایش" placeholder="ویرایش">
 
+                                <input type="submit" name="submit" tabindex="4"
+                                       class="form-control btn btn-login" value="ویرایش" placeholder="ویرایش">
+
+                            </fieldset>
 
                         </form>
                     </div>
@@ -143,6 +127,5 @@
         </div>
     </div>
 
-
-
 {% endblock %}
+

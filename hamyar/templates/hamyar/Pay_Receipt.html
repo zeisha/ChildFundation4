@@ -41,6 +41,9 @@
 
                                 </tr>
 
+
+                                {% if receipt.madadju %}
+
                                 <tr>
                                     <td>{{ receipt.madadju.user.user.username }}</td>
                                     <td>مددجو</td>
@@ -52,6 +55,7 @@
                                     <td>نوع</td>
 
                                 </tr>
+                                {% endif %}
 
                             </tbody>
                         </table>

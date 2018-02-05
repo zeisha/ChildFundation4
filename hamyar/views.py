@@ -14,8 +14,10 @@ from karbar.forms import MessageForm
 from modir.models import Admin
 from karbar.models import Message
 import datetime, random
-from hamyar.forms import PaymentForm, GiftForm
-from hamyar.models import Payment, Gift
+from hamyar.forms import PaymentForm, GiftForm, PaymentFoundationForm
+from hamyar.models import Payment, Gift, PaymentFoundation
+from madadkar.models import Madadkar
+from modir.models import Admin
 
 
 @login_required()
@@ -53,21 +55,20 @@ def EhdaView(request, username):
     madadkar = madadju.current_madadkar
 
     if request.method == 'POST':
+        message = "درخواست هدایای غیر نقدی با موفقیت ارسال شد"
+        context = {}
+        context['message'] = message
+        context['type'] = 'green'
+
         form = GiftForm(request.POST)
         content = request.POST.get('content')
         now = datetime.datetime.now()
 
         myUser = MyUser.objects.get(user=request.user)
         hamyar = Hamyar.objects.get(user=myUser)
-        if form.is_valid():
-            print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
-            gift = Gift.objects.create(date=now, madadju=madadju, hamyar=hamyar, content=content, madadkar=madadkar)
-            gift.save()
-            print(gift.date)
-            print(gift.content)
-            return render(request, 'hamyar/Ehda_Receipt.html', {'gift': gift})
-        else:
-            return render(request, 'hamyar/Ehda_Receipt.html')
+        gift = Gift.objects.create(date=now, madadju=madadju, hamyar=hamyar, madadkar=madadkar, content=content)
+        gift.save()
+        return render(request, 'hamyar/Hamyar_Home.html', context)
 
     if request.method == 'GET':
         form = GiftForm()
@@ -136,21 +137,18 @@ def PayView(request, username):
         myUser = MyUser.objects.get(user=request.user)
         hamyar = Hamyar.objects.get(user=myUser)
 
+        admin = Admin.objects.all()[0]
+
         kind = request.POST.get('kind')
 
         if form.is_valid():
 
-            print("---------------------------------------------------------------")
-            print(madadju.using)
-            print("---------------------------------------------------------------")
+            admin.saving += (int(value)*10)/100
             madadju.using += int((int(value) * madadju.percent) / 100)
-            print(madadju.using)
-            print("---------------------------------------------------------------")
-            print(madadju.saving)
-            print("---------------------------------------------------------------")
-            madadju.saving += int(value) - madadju.using
+            madadju.saving += int(value) - madadju.using - admin.saving
             print(madadju.saving)
             madadju.save()
+            admin.save()
 
             receipt = Payment.objects.create(date=now, value=value, receipt_number=receipt_number,
                                              madadju=madadju, hamyar=hamyar, kind=kind)
@@ -281,3 +279,55 @@ def ProfileView(request, username):
         message = Message.objects.create(sender=u, receiver=myUser, text=text)
         message.save()
         return render(request, 'hamyar/Hamyar_Home.html', context)
+
+
+@login_required()
+def EnserafView(request, username):
+    print("-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww")
+    myUserList = MyUser.objects.all()
+    for myUser in myUserList:
+        if myUser.user.username == username:
+            break
+    madadju = Madadju.objects.get(user=myUser)
+
+    myUser = MyUser.objects.get(user=request.user)
+    hamyar = Hamyar.objects.get(user=myUser)
+
+    adaptlist = Adapt.objects.all()
+    for adapt in adaptlist:
+        if adapt.madadju == madadju and adapt.hamyar == hamyar:
+            adapt.delete(adapt)
+            break
+
+    return render(request, 'hamyar/Madadjoo_List.html')
+
+def Enserafview2(request):
+    return render(request, 'hamyar/Entekhab.html')
+
+@login_required()
+def PayFoundationView(request):
+
+    if request.method == 'POST':
+        form = PaymentFoundationForm(request.POST)
+        now = datetime.datetime.now()
+        value = request.POST.get('value')
+        receipt_number = random.randint(10000000, 100000000)
+
+        myUser = MyUser.objects.get(user=request.user)
+        hamyar = Hamyar.objects.get(user=myUser)
+
+        admin = Admin.objects.all()[0]
+        if form.is_valid():
+            admin.saving += int(value)
+            admin.save()
+
+            receipt = PaymentFoundation.objects.create(date=now, value=value, receipt_number=receipt_number,
+                                            hamyar=hamyar)
+            receipt.save()
+            return render(request, 'hamyar/Pay_Receipt.html', {'receipt': receipt})
+        else:
+            return render(request, 'hamyar/Pay_Receipt.html')
+
+    if request.method == 'GET':
+        form = PaymentForm()
+        return render(request, 'hamyar/Pay_Foundation.html')

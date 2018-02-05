@@ -19,3 +19,8 @@ class GiftForm(forms.ModelForm):
     class Meta:
         model = Gift
         fields = ['content']
+
+class PaymentFoundationForm(forms.ModelForm):
+    class Meta:
+        model = PaymentFoundation
+        fields = ['value']

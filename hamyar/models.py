@@ -44,5 +44,6 @@ class PaymentFoundation(models.Model):
     date = models.DateField()
     value = models.IntegerField()
     hamyar = models.ForeignKey(Hamyar, on_delete=models.DO_NOTHING)
+    receipt_number = models.IntegerField(default=0)
 
 
