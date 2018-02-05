@@ -7,7 +7,7 @@ from modir.models import Admin
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
-
+from karbar.forms import SignupForm2
 from MySite.forms import ContactForm, MessageForm
 from hamyar.forms import PaymentForm
 import datetime, random
@@ -166,4 +166,37 @@ def madadjuviewh(request, username):
         adapt.save()
         context['adapt']=adapt
         return render(request, 'hamyar/Hamyar_Home.html', context)
+
+
+
+def madadjuprofile(request):
+    user = request.user
+    user_form = SignupForm2(instance=user)
+    myUser = MyUser.objects.get(user=request.user)
+    madadju = Madadju.objects.get(user=myUser)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            user_form = SignupForm2(request.POST, instance=request.user)
+            # myUser = MyUser.objects.get(user=request.user)
+            if user_form.is_valid():
+                user_form.save()
+                myUser.user = request.user
+                myUser.phone_number = request.POST.get('phone_number')
+                myUser.national_id = request.POST.get('national_id')
+                myUser.country = request.POST.get('country')
+                myUser.city = request.POST.get('city')
+                myUser.address = request.POST.get('address')
+                myUser.postal_code = request.POST.get('postal_code')
+                madadju.physical_state = request.POST.get('physical_state')
+                madadju.age=request.POST.get('age')
+                madadju.grade=request.POST.get('grade')
+                madadju.gender=request.POST.get('gender')
+                myUser.save()
+                madadju.save()
+                message = "تغییرات با موفقیت ثبت شد"
+                context = {}
+                context['message'] = message
+                return render(request, 'madadju/madadju.html', context)
+    return render(request, 'madadju/profile.html', {'user': user, 'myUser': myUser, 'madadju':madadju})
+
 
