@@ -23,14 +23,14 @@
                                     <div style="direction: rtl">
                                         {% if all_messages %}
                                             {% for message in all_messages %}
-                                                <div class="col-sm-3 col-lg-4" style="float: right !important;">
+                                                <div class="col-sm-10 col-lg-12" style="float: right !important;">
                                                     <div class="thumbnail">
                                                         <div class="caption">
                                                             <h4 style="font-weight: bold; color:#7a0134">فرستنده: {{ message.sender }}</h4>
                                                             {{ message.text }}
                                                             <br>
                                                             <br>
-                                                            <a href="{{  }}">بررسی شد.</a>
+                                                            <a href="{% url 'hamyar-message-detail' message.pk%}">بررسی شد.</a>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -4,25 +4,23 @@ p{% extends 'hamyar/Base.html' %}
     پروفایل همیار
 {% endblock %}
 
-
 {% block content %}
     <div id="page-content-wrapper" class="offset8">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="text-right" style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right;">
-                        <h3 style="font-family: 'B Nazanin';">لیست وجوه پرداختی</h3>
+                    <div class="pull-right" style="background-color: white; margin: 5%; padding: 5%; border-radius: 10px; text-align: right; width: 87%;">
+                        <h3 style="font-family: 'B Nazanin';">پروفایل همیار</h3>
                         <br>
 
-
-                        <table class="table table-striped" style="align-content: right">
+                        <table class="table table-striped" style="align-content: right; direction: ltr; text-align: right; font-family: 'B Nazanin'; font-size: 20px; ">
                             <thead>
                                 <tr>
+                                    <th class="text-right">نوع</th>
                                     <th class="text-right">تاریخ</th>
                                     <th class="text-right">مقصد</th>
                                     <th class="text-right">کد پیگیری</th>
                                     <th class="text-right">مبلغ</th>
-                                    <th class="text-right">نوع</th>
                                 </tr>
                             </thead>
 
@@ -30,11 +28,11 @@ p{% extends 'hamyar/Base.html' %}
                             {% if madadju_receipt_list %}
                                 {% for receipt in madadju_receipt_list %}
                                 <tr>
+                                    <td>{{ receipt.kind }}</td>
                                     <td>{{ receipt.date }}</td>
                                     <td>{{ receipt.madadju.user.user.last_name }}</td>
                                     <td>{{ receipt.receipt_number }}</td>
                                     <td>{{ receipt.value }}</td>
-                                    <td>{{ receipt.kind }}</td>
                                 </tr>
                                 {% endfor %}
                             {% endif %}
@@ -42,11 +40,11 @@ p{% extends 'hamyar/Base.html' %}
                             {% if foundation_receipt_list %}
                                 {% for receipt in foundation_receipt_list %}
                                     <tr>
+                                    <td>-</td>
                                     <td>{{ receipt.date }}</td>
                                     <td>سازمان</td>
                                     <td>{{ receipt.receipt_number }}</td>
                                     <td>{{ receipt.value }}</td>
-                                    <td>-</td>
                                 </tr>
                                 {% endfor %}
                             {% endif %}

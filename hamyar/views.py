@@ -363,5 +363,5 @@ def message_detail(request, pk):
     message = Message.objects.get(pk=pk)
     message.delete()
 
-    all_messages = Message.objects.filter(receiver=hamyar)
+    all_messages = Message.objects.filter(receiver=myUser)
     return render(request, 'hamyar/Letters_Box.html', {'all_messages': all_messages})
